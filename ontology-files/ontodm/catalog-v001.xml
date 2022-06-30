@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1656252356664" name="http://kt.ijs.si/panovp/OntoDM-KDD.owl" uri="OntoDM-KDD.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1656252356664" name="http://kt.ijs.si/panovp/OntoDM/OntoDM-uncurated.owl" uri="OntoDM-uncurated.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1656252356664" name="http://kt.ijs.si/panovp/OntoDM/OntoDMUseCase1.owl" uri="OntoDMUseCase1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1656252356664" name="http://kt.ijs.si/panovp/OntoDM/external.owl" uri="external.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1656252356664" name="http://kt.ijs.si/panovp/OntoDM/external_OBI.owl" uri="external_OBI.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1656252356664" name="http://kt.ijs.si/panovp/OntoDT" uri="OntoDT.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1656252356664" name="http://www.ontodm.com/OntoDM-core/" uri="OntoDM.owl"/>
+    </group>
+</catalog>

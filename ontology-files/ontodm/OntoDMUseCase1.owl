@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY swo "http://www.ebi.ac.uk/efo/swo/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY OntoDM "http://kt.ijs.si/panovp/OntoDM#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://kt.ijs.si/panovp/OntoDM/OntoDMUseCase1.owl#"
+     xml:base="http://kt.ijs.si/panovp/OntoDM/OntoDMUseCase1.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:swo="http://www.ebi.ac.uk/efo/swo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:OntoDM="http://kt.ijs.si/panovp/OntoDM#">
+    <owl:Ontology rdf:about="http://kt.ijs.si/panovp/OntoDM/OntoDMUseCase1.owl">
+        <owl:imports rdf:resource="http://kt.ijs.si/panovp/OntoDM.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_026566 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_026566">
+        <rdfs:label xml:lang="en">evaluation calculation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_866771"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_053780 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_053780">
+        <rdfs:label xml:lang="en">per-fold evaluation workflow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_858511"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_464627"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_060791 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_060791">
+        <rdfs:label xml:lang="en">predictive model evaluation workflow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_858511"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_268015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_092506 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_092506">
+        <rdfs:label xml:lang="en">train-test dataset construction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&swo;SWO_0000393"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_139336 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_139336">
+        <rdfs:label xml:lang="en">statistical tests calculation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_866771"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_257273"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_166189 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_166189">
+        <rdfs:label xml:lang="en">per-fold validation workflow execution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_059913"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_362971"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_092506"/>
+                            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_756329"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_205940 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_205940">
+        <rdfs:label xml:lang="en">algorithm performance comparison workflow execution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_982352"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_972848"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:hasValue rdf:resource="&OntoDM;OntoDM_U1_552415"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_139336"/>
+                            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_257273"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_223816 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_223816">
+        <rdfs:label xml:lang="en">algorithm performance comparison scenario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_182357"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_257273 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_257273">
+        <rdfs:label xml:lang="en">10-fold cross-validation workflow execution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_059913"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_369966"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_166189"/>
+                            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_362971"/>
+                            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_459620"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_268015 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_268015">
+        <rdfs:label xml:lang="en">predictive model evaluation scenario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_279507"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_362971 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_362971">
+        <rdfs:label xml:lang="en">10-fold sampling process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_000255"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_369966 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_369966">
+        <rdfs:label xml:lang="en">10-fold cross-validation workflow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_858511"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_670574"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_459620 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_459620">
+        <rdfs:label xml:lang="en">10-fold cross-validation evaluation calculation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_866771"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_166189"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_464627 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_464627">
+        <rdfs:label xml:lang="en">per-fold validation scenario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_279507"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_670574 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_670574">
+        <rdfs:label xml:lang="en">10-fold cross-validation scenario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_279507"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_756329 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_756329">
+        <rdfs:label xml:lang="en">predictive model evaluation workflow execution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_059913"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_092506"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_866771 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_866771">
+        <rdfs:label xml:lang="en">calculation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&swo;SWO_0000393"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_958970 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_958970">
+        <rdfs:label xml:lang="en">predictive model evaluation calculation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_U1_026566"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_000309"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_972848 -->
+
+    <owl:Class rdf:about="&OntoDM;OntoDM_U1_972848">
+        <rdfs:label xml:lang="en">algorithm performance comparison workflow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoDM;OntoDM_817888"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="&OntoDM;OntoDM_U1_223816"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kt.ijs.si/panovp/OntoDM#OntoDM_U1_552415 -->
+
+    <owl:NamedIndividual rdf:about="&OntoDM;OntoDM_U1_552415">
+        <rdf:type rdf:resource="&OntoDM;OntoDM_757135"/>
+        <rdfs:label xml:lang="en">algorithm performance comparison objective</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_053780"/>
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_060791"/>
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_369966"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_268015"/>
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_464627"/>
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_670574"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_166189"/>
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_257273"/>
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_756329"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_026566"/>
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_139336"/>
+            <rdf:Description rdf:about="&OntoDM;OntoDM_U1_459620"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

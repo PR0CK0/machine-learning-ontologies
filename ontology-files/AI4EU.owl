@@ -1,0 +1,425 @@
+@prefix : <http://www.ai4eu.eu/ontologies/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.ai4eu.eu/ontologies/core> .
+
+<http://www.ai4eu.eu/ontologies/core> rdf:type owl:Ontology ;
+                                       owl:versionIRI <http://www.ai4eu.eu/ontologies/0.9.5/core> ;
+                                       owl:imports foaf: ;
+                                       dct:date "2021-06-01"@en ;
+                                       rdfs:comment "The AI4EU ontology aims to formally represent the AI4EU model for describing AI resources"@en ;
+                                       rdfs:label "The AI4EU Ontology"@en ;
+                                       owl:versionInfo "0.9.5"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/date
+dct:date rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ai4eu.eu/ontologies/core#accompanied_by
+:accompanied_by rdf:type owl:ObjectProperty ;
+                rdfs:domain :Distribution ;
+                rdfs:range :Documentation ;
+                rdfs:comment "Associates a resource distribution with a documentation item for the resource."@en ;
+                rdfs:label "Accompanied by"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#associated_with
+:associated_with rdf:type owl:ObjectProperty ;
+                 rdfs:domain :AIResource ;
+                 rdfs:range foaf:Project ;
+                 rdfs:comment "Associates an AI resource with a project relevant to the resource."@en ;
+                 rdfs:label "Associated With"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#atTRL
+:atTRL rdf:type owl:ObjectProperty ;
+       rdfs:domain :Distribution ;
+       rdfs:range :TechnologyReadinessLevel ;
+       rdfs:comment "Associates a distribution of an AI resource with its technology readiness level."@en ;
+       rdfs:label "At TRL"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#authority
+:authority rdf:type owl:ObjectProperty ;
+           rdfs:domain :TechnologyReadinessLevel ;
+           rdfs:range foaf:Agent ;
+           rdfs:comment "Associates a Technology Readiness Level with the organisation that defined it."@en ;
+           rdfs:label "Authority"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#distributed_as
+:distributed_as rdf:type owl:ObjectProperty ;
+                rdfs:domain :AIResource ;
+                rdfs:range :Distribution ;
+                rdfs:comment "Associates an AI resource with one of its distributions"@en ;
+                rdfs:label "Distributed as"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#language_used
+:language_used rdf:type owl:ObjectProperty ;
+               rdfs:domain :Distribution ;
+               rdfs:comment "The programming language primarily used for/by an AI resource."@en ;
+               rdfs:label "Language Used"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#location
+:location rdf:type owl:ObjectProperty ;
+          rdfs:domain foaf:Organization ;
+          rdfs:comment "The country where an organisation participating in the development or management of a resource is located. It is recommended that the DBPedia URI of the corresponding country is provided."@en ;
+          rdfs:label "Location"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#organised_by
+:organised_by rdf:type owl:ObjectProperty ;
+              rdfs:domain :Challenge ;
+              rdfs:range :Project ;
+              rdfs:comment "The Project that organised the challenge."@en ;
+              rdfs:label "Organised by"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#provider
+:provider rdf:type owl:ObjectProperty ;
+          rdfs:domain :Distribution ;
+          rdfs:range foaf:Agent ;
+          rdfs:comment "An entity responsible for the creation/distribution of a resource."@en ;
+          rdfs:label "Provider"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#refers_to
+:refers_to rdf:type owl:ObjectProperty ;
+           rdfs:domain :AIResource ;
+           rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+           rdfs:comment "Associates an AI resource with the AI fields it adheres to."@en ;
+           rdfs:label "Refers to"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#requires
+:requires rdf:type owl:ObjectProperty ;
+          rdfs:domain :AIResource ;
+          rdfs:range :ComputationalResource ;
+          rdfs:comment "Associates an AI resource with the computational resources it requires for functioning."@en ;
+          rdfs:label "Requires"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#used_in
+:used_in rdf:type owl:ObjectProperty ;
+         rdfs:domain :AIResource ;
+         rdfs:range :ApplicationArea ;
+         rdfs:comment "Associates an AI resource with its application areas."@en ;
+         rdfs:label "Used in"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.ai4eu.eu/ontologies/core#acumos_distribution
+:acumos_distribution rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Distribution ;
+                     rdfs:range xsd:anyURI ;
+                     rdfs:comment "Associates a resource with its distribution in the AI4EU Acumos deployment."@en ;
+                     rdfs:label "Acumos Distribution"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#download
+:download rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Distribution ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "A web address from where a distribution is made available."@en ;
+          rdfs:label "Download"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#trl
+:trl rdf:type owl:DatatypeProperty ;
+     rdfs:domain :TechnologyReadinessLevel ;
+     rdfs:range xsd:integer ;
+     rdfs:comment "Associates a Technology Readiness Level instance with the corresponding numeric value."@en ;
+     rdfs:label "TRL Value"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#under_license
+:under_license rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Distribution ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "Associates a resource distribution with its accompanying license."@en ;
+               rdfs:label "Under License"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ai4eu.eu/ontologies/core#AIOrganization
+:AIOrganization rdf:type owl:Class ;
+                rdfs:subClassOf :KnowledgeComponent ,
+                                foaf:Organization ;
+                rdfs:comment "An organization with interest or expertise in AI technologies"@en ;
+                rdfs:label "AI Organization"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#AIResource
+:AIResource rdf:type owl:Class ;
+            rdfs:subClassOf :Entity ;
+            rdfs:comment "An accessible and usable resource pertaining to AI research and applications."@en ;
+            rdfs:label "AI Resource"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Application
+:Application rdf:type owl:Class ;
+             rdfs:subClassOf :StandAlone ;
+             rdfs:comment "A distribution directly executable on the user's hardware"@en ;
+             rdfs:label "Application"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#ApplicationArea
+:ApplicationArea rdf:type owl:Class ;
+                 rdfs:subClassOf :Quality ;
+                 rdfs:comment "An application or scientific domain where an AI resource is or can be of use (possibly in the context of a larger framework)."@en ;
+                 rdfs:label "Application Area"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Challenge
+:Challenge rdf:type owl:Class ;
+           rdfs:subClassOf :KnowledgeComponent ;
+           rdfs:comment "A challenge organised in the context of an Event or Project."@en ;
+           rdfs:label "Challenge"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Company
+:Company rdf:type owl:Class ;
+         rdfs:subClassOf :Entity ,
+                         foaf:Organization ;
+         rdfs:comment "A private institution or corporation."@en ;
+         rdfs:label "Company"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#ComputationalResource
+:ComputationalResource rdf:type owl:Class ;
+                       rdfs:subClassOf :Entity ;
+                       rdfs:comment "A hardware or software asset to be used by other entities like programs or models."@en ;
+                       rdfs:label "Computational Resource"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Dataset
+:Dataset rdf:type owl:Class ;
+         rdfs:subClassOf :KnowledgeComponent ;
+         rdfs:comment "A collection of data."@en ;
+         rdfs:label "Dataset"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Distribution
+:Distribution rdf:type owl:Class ;
+              rdfs:subClassOf :Entity ;
+              rdfs:comment "A specific form of packaging and means of exposure and availability for an AI resource."@en ;
+              rdfs:label "Distribution"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#DockerContainer
+:DockerContainer rdf:type owl:Class ;
+                 rdfs:subClassOf :StandAlone ;
+                 rdfs:comment "A standalone distribution of an AI resource, bundled as a Docker container"@en ;
+                 rdfs:label "Docker Container"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Documentation
+:Documentation rdf:type owl:Class ;
+               rdfs:subClassOf :Entity ;
+               rdfs:comment "An entity that provides further information on the characteristics and usage of an AI Resource"@en ;
+               rdfs:label "Documentation"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#EducationalResource
+:EducationalResource rdf:type owl:Class ;
+                     rdfs:subClassOf :KnowledgeComponent ;
+                     rdfs:comment "A resource built and distributed for educational purposes"@en ;
+                     rdfs:label "Educational Resource"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Embedded
+:Embedded rdf:type owl:Class ;
+          rdfs:subClassOf :Distribution ;
+          rdfs:comment "A distribution of an AI resource that is engrained into a broader solution or system."@en ;
+          rdfs:label "Embedded"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Entity
+:Entity rdf:type owl:Class ;
+        rdfs:comment "An AI-related concept that has a tangible manifestation (i.e. it has a physical or digital presence)"@en ;
+        rdfs:label "Entity"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf :KnowledgeComponent ;
+       rdfs:comment "A happening of note for the broader AI community"@en ;
+       rdfs:label "Event"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Forum
+:Forum rdf:type owl:Class ;
+       rdfs:subClassOf :Website ;
+       rdfs:comment "A website where users can exchange information and feedback on an AI resource."@en ;
+       rdfs:label "Forum"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#HardwareComponent
+:HardwareComponent rdf:type owl:Class ;
+                   rdfs:subClassOf :AIResource ;
+                   rdfs:comment "A hardware AI resource (device/equipment)."@en ;
+                   rdfs:label "Hardware Component"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#KnowledgeComponent
+:KnowledgeComponent rdf:type owl:Class ;
+                    rdfs:subClassOf :AIResource ;
+                    rdfs:comment "A resource that encapsulates knowledge or results relevant to AI research and applications."@en ;
+                    rdfs:label "Knowledge Component"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Library
+:Library rdf:type owl:Class ;
+         rdfs:subClassOf :Distribution ;
+         rdfs:comment "A distribution meant to be incorporated as a module into a larger framework or application."@en ;
+         rdfs:label "Library"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Manual
+:Manual rdf:type owl:Class ;
+        rdfs:subClassOf :Documentation ;
+        rdfs:comment "A document that provides instructions on the installation, management or usage of an AI resource."@en ;
+        rdfs:label "Manual"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Model
+:Model rdf:type owl:Class ;
+       rdfs:subClassOf :KnowledgeComponent ;
+       rdfs:comment "An AI Model."@en ;
+       rdfs:label "Model"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#ModelBundle
+:ModelBundle rdf:type owl:Class ;
+             rdfs:subClassOf :Distribution ;
+             rdfs:comment "Distribution of an AI resource in an Acumos-ready onboarding format."@en ;
+             rdfs:label "Model Bundle"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Notebook
+:Notebook rdf:type owl:Class ;
+          rdfs:subClassOf :Distribution ;
+          rdfs:comment "Distribution of an AI resource as a digital notebook (e.g. Jupyter)"@en ;
+          rdfs:label "Notebook"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Ontology
+:Ontology rdf:type owl:Class ;
+          rdfs:subClassOf :KnowledgeComponent ;
+          rdfs:label "Ontology"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Presentation
+:Presentation rdf:type owl:Class ;
+              rdfs:subClassOf :Documentation ;
+              rdfs:comment "A document providing information on an AI resource, meant to be used as assistive material to an oral/visual lecture on the resource."@en ;
+              rdfs:label "Presentation"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Project
+:Project rdf:type owl:Class .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Publication
+:Publication rdf:type owl:Class ;
+             rdfs:subClassOf :KnowledgeComponent ;
+             rdfs:comment "A published scholary manuscript."@en ;
+             rdfs:label "Publication"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Quality
+:Quality rdf:type owl:Class ;
+         rdfs:subClassOf :Entity ;
+         rdfs:comment "A qualitative or descriptive characteristic of an AI-related entity."@en ;
+         rdfs:label "Quality"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Service
+:Service rdf:type owl:Class ;
+         rdfs:subClassOf :Distribution ;
+         rdfs:comment "An AI resource distribution accessible as a web service."@en ;
+         rdfs:label "Service"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#SoftwareComponent
+:SoftwareComponent rdf:type owl:Class ;
+                   rdfs:subClassOf :AIResource ;
+                   rdfs:comment "A programmatic AI resource."@en ;
+                   rdfs:label "Software Component"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#SourceCode
+:SourceCode rdf:type owl:Class ;
+            rdfs:subClassOf :Distribution ;
+            rdfs:comment "The source code distribution of an AI resource"@en ;
+            rdfs:label "Source Code"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#StandAlone
+:StandAlone rdf:type owl:Class ;
+            rdfs:subClassOf :Distribution ;
+            rdfs:comment "A self-contained distribution of an AI resource."@en ;
+            rdfs:label "StandAlone"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#SuccessStory
+:SuccessStory rdf:type owl:Class ;
+              rdfs:subClassOf :KnowledgeComponent ;
+              rdfs:comment "A significant outcome, event or product"@en ;
+              rdfs:label "Success Story"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#TechnologyReadinessLevel
+:TechnologyReadinessLevel rdf:type owl:Class ;
+                          rdfs:subClassOf :Quality ;
+                          rdfs:comment "A metric denoting the maturity of a distribution of an AI resource."@en ;
+                          rdfs:label "Technology Readiness Level"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Tutorial
+:Tutorial rdf:type owl:Class ;
+          rdfs:subClassOf :Documentation ;
+          rdfs:comment "A document that provides instructions on the usage of an AI resource on specific use cases and under a specific usage scenario."@en ;
+          rdfs:label "Tutorial"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Website
+:Website rdf:type owl:Class ;
+         rdfs:subClassOf :Documentation ;
+         rdfs:comment "A group of web pages, under the same domain, partially or completely dedicated to an AI resource."@en ;
+         rdfs:label "Website"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Wiki
+:Wiki rdf:type owl:Class ;
+      rdfs:subClassOf :Website ;
+      rdfs:comment "A collection of informative web pages dealing with different aspects of an AI resource and its usage."@en ;
+      rdfs:label "Wiki"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Project
+foaf:Project rdfs:subClassOf :KnowledgeComponent .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,1764 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY pav "http://purl.org/pav/2.3/" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY np "http://www.nanopub.org/nschema#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/" >
+    <!ENTITY fibo-fnd-utl-alx "http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/Analytics/" >
+    <!ENTITY fibo-fnd-rel-rel "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/" >
+    <!ENTITY fibo-fnd-utl-bt "http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/" >
+    <!ENTITY fibo-fnd-utl-av "http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/" >
+    <!ENTITY anno "http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/" >
+]>
+
+<rdf:RDF
+     xml:base="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/"
+     xmlns:fibo-fnd-utl-alx="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/Analytics/"
+     xmlns:np="http://www.nanopub.org/nschema#"
+     xmlns:anno="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/"
+     xmlns:fibo-fnd-rel-rel="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"
+     xmlns:pav="http://purl.org/pav/2.3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:fibo-fnd-utl-av="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:fibo-fnd-utl-bt="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="&anno;">
+        <owl:versionIRI rdf:resource="&anno;0.5"/>
+        <owl:imports rdf:resource="&fibo-fnd-utl-alx;"/>
+        <owl:imports rdf:resource="&fibo-fnd-utl-av;"/>
+        <owl:imports rdf:resource="&fibo-fnd-utl-bt;"/>
+        <owl:imports rdf:resource="http://www.nanopub.org/nschema"/>
+        <owl:imports rdf:resource="&fibo-fnd-rel-rel;"/>
+        <sm:dependsOn rdf:datatype="&xsd;anyURI">&dct;</sm:dependsOn>
+        <dct:modified rdf:datatype="&xsd;string">April 22nd, 2016</dct:modified>
+        <dct:creator>MD Ridwan Al Iqbal</dct:creator>
+        <sm:fileAbbreviation rdf:datatype="&xsd;string">anno</sm:fileAbbreviation>
+        <sm:dependsOn rdf:datatype="xsd;anyURI">http://www.omg.org/spec/EDMC-FIBO/FND/</sm:dependsOn>
+        <dct:abstract>When creating an Artificial Neural Network for machine learning tasks, present research offers some theoretical information about how ANNs should be constructed, but this theory is often not sufficient for creating state-of-the-art models. In these cases, researchers looking to create ANNs rely on some best practices which have emerged in recent years. Such practices typically stem from some research group having success with a particular approach to a particular application of ANNs. In these cases, the reasons for success usually have some intuition behind them, but lack formal proofs of optimality.
+
+One such area in which researchers rely on “best practices” is with network weight initialization. There are a number of options for initialization, with almost all options being appropriate for some situations and not for others. The choice of initialization function usually depends on network structure, the network&apos;s task, the input data, etc. Having a system which could help researchers recall best practices, and perhaps recommend others which are not known to the researcher, is a requirement for those who use ANNs in their research but are not experts.</dct:abstract>
+        <skos:changeNote>In this version, unnecessary Nanopub assertions were removed, some minor updates were made with regards to labels, and domains and ranges were added to some properties.</skos:changeNote>
+        <dct:creator>Spencer Norris</dct:creator>
+        <sm:filename rdf:datatype="&xsd;string">OE_11_Team_Cerebral.rdf</sm:filename>
+        <sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/prov-o/</sm:dependsOn>
+        <owl:priorVersion rdf:datatype="&xsd;string">https://drive.google.com/file/d/0ByU5I4EWAyp5YWgzd2V5UjA3alk/view?usp=sharing</owl:priorVersion>
+        <rdfs:label>Team Cerebral Ontology</rdfs:label>
+        <sm:dependsOn rdf:datatype="&xsd;anyURI">&skos;</sm:dependsOn>
+        <dct:creator>Matt Klawonn</dct:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &pav;authoredBy -->
+
+    <owl:AnnotationProperty rdf:about="&pav;authoredBy"/>
+    
+
+
+    <!-- &np;hasAssertion -->
+
+    <owl:AnnotationProperty rdf:about="&np;hasAssertion"/>
+    
+
+
+    <!-- &np;hasProvenance -->
+
+    <owl:AnnotationProperty rdf:about="&np;hasProvenance"/>
+    
+
+
+    <!-- &np;hasPublicationInfo -->
+
+    <owl:AnnotationProperty rdf:about="&np;hasPublicationInfo"/>
+    
+
+
+    <!-- &prov;generatedAtTime -->
+
+    <owl:AnnotationProperty rdf:about="&prov;generatedAtTime"/>
+    
+
+
+    <!-- &prov;wasAttributedTo -->
+
+    <owl:AnnotationProperty rdf:about="&prov;wasAttributedTo"/>
+    
+
+
+    <!-- &prov;wasDerivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="&prov;wasDerivedFrom"/>
+    
+
+
+    <!-- &foaf;homePage -->
+
+    <owl:AnnotationProperty rdf:about="&foaf;homePage"/>
+    
+
+
+    <!-- &foaf;mbox -->
+
+    <owl:AnnotationProperty rdf:about="&foaf;mbox"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &anno;hasActivationFunction -->
+
+    <owl:ObjectProperty rdf:about="&anno;hasActivationFunction">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&anno;Unit"/>
+        <rdfs:range rdf:resource="&anno;ActivationFunction"/>
+        <fibo-fnd-utl-av:definitionOrigin>Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>has activation function</rdfs:label>
+        <skos:definition>indicates that a certain unit has a particular function as its activation function</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &anno;hasMinimumCompatibleDepth -->
+
+    <owl:ObjectProperty rdf:about="&anno;hasMinimumCompatibleDepth">
+        <rdfs:domain rdf:resource="&anno;WeightInitializationAlgorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &anno;isActivationFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="&anno;isActivationFunctionOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&anno;ActivationFunction"/>
+        <rdfs:range rdf:resource="&anno;Unit"/>
+        <fibo-fnd-utl-av:definitionOrigin>Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>is activation function of</rdfs:label>
+        <skos:definition>indicates that a function serves as the activation function of a unit</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &anno;isCompatibleWithActivationFunction -->
+
+    <owl:ObjectProperty rdf:about="&anno;isCompatibleWithActivationFunction">
+        <rdfs:domain rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:range rdf:resource="&anno;ActivationFunction"/>
+        <fibo-fnd-utl-av:definitionOrigin>Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>is compatible with activation function</rdfs:label>
+        <skos:definition>Indicates that a weight initialization algorithm is compatible with a particular activation function.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &anno;isCompatibleWithLayerType -->
+
+    <owl:ObjectProperty rdf:about="&anno;isCompatibleWithLayerType">
+        <rdfs:domain rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:range rdf:resource="&anno;Layer"/>
+        <fibo-fnd-utl-av:definitionOrigin>Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>is compatible with layer type</rdfs:label>
+        <skos:definition>Indicates that a weight initialization algorithm is compatible with a particular layer type.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &anno;hasDepth -->
+
+    <owl:DatatypeProperty rdf:about="&anno;hasDepth">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&anno;ArtificialNeuralNetwork"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+        <fibo-fnd-utl-av:definitionOrigin>Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>has depth</rdfs:label>
+        <skos:definition>indicates that an artificial neural network has a certain depth</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- &anno;hasMaximumCompatibleDepth -->
+
+    <owl:DatatypeProperty rdf:about="&anno;hasMaximumCompatibleDepth">
+        <rdfs:domain rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:range rdf:resource="&fibo-fnd-utl-bt;nonNegativeWholeNumber"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">has maximum compatible depth</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">Indicates the maximum artificial neural network depth with which a weight initialization algorithm can be used.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- &anno;hasMinimumCompatibleDepth -->
+
+    <owl:DatatypeProperty rdf:about="&anno;hasMinimumCompatibleDepth">
+        <rdfs:range rdf:resource="&fibo-fnd-utl-bt;nonNegativeWholeNumber"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- &anno;hasMinimumDepth -->
+
+    <owl:DatatypeProperty rdf:about="&anno;hasMinimumDepth">
+        <rdfs:subPropertyOf rdf:resource="&anno;hasDepth"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&anno;ArtificialNeuralNetwork"/>
+        <rdfs:range rdf:resource="&fibo-fnd-utl-bt;nonNegativeWholeNumber"/>
+        <rdfs:label>has minimum depth</rdfs:label>
+        <skos:definition>Specifies the minimum depth an Artificial Neural Network can have</skos:definition>
+        <skos:example>Deep neural networks have a minimum depth of 2.</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- &anno;isLinear -->
+
+    <owl:DatatypeProperty rdf:about="&anno;isLinear">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&anno;Function"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <fibo-fnd-utl-av:definitionOrigin>Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>is linear</rdfs:label>
+        <skos:definition>indicates that a given function is linear in its inputs</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- &anno;isSmooth -->
+
+    <owl:DatatypeProperty rdf:about="&anno;isSmooth">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&anno;Function"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <fibo-fnd-utl-av:definitionOrigin>Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>is smooth</rdfs:label>
+        <skos:definition>indicates that a certain function is smooth in its inputs</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &dct;Agent -->
+
+    <owl:Class rdf:about="&dct;Agent"/>
+    
+
+
+    <!-- &anno;ActivationFunction -->
+
+    <owl:Class rdf:about="&anno;ActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;Function"/>
+        <owl:disjointWith rdf:resource="&anno;ProbabilityDensityFunction"/>
+        <owl:disjointWith rdf:resource="&anno;Unit"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">https://en.wikipedia.org/wiki/Activation_function</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">activation function</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a function associated with a unit in an artificial neural network</skos:definition>
+        <skos:example>Various activation functions are usable with the Xavier weight Initialization algorithm.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;Algorithm -->
+
+    <owl:Class rdf:about="&anno;Algorithm">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">http://www.dictionary.com/browse/algorithm?s=t</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">algorithm</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a set of rules for solving a problem in a finite number of steps, as for finding the greatest common divisor</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Neural network weights are chosen by an algorithm.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;ArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="&anno;ArtificialNeuralNetwork">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&anno;ComputationalModel"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;hasPart"/>
+                        <owl:someValuesFrom rdf:resource="&anno;Layer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&anno;hasDepth"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">1</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&anno;ComputationalModel"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">https://www.techopedia.com/definition/5967/artificial-neural-network-ann</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">artificial neural network</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a computational model based on the structure and functions of biological neural networks. Information that flows through the network affects the structure of the ANN because a neural network changes - or learns, in a sense - based on that input and output</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Depth is a property of Artificial Neural Networks.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;ComputationalModel -->
+
+    <owl:Class rdf:about="&anno;ComputationalModel">
+        <rdfs:subClassOf rdf:resource="&anno;Model"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">https://en.wikipedia.org/wiki/Computational_model</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">computational model</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a computational model is a mathematical model in computational science that requires extensive computational resources to study the behavior of a complex system by computer simulation</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Many scientific fields use computational models to achieve results which are beyond traditional experimental methods.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;DeepArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="&anno;DeepArtificialNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="&anno;ArtificialNeuralNetwork"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasDepth"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="&xsd;integer">2</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">Deep Neural Networks for Acoustic Modeling in Speech Recognition</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">deep artificial neural network</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">an artificial neural network that has more than one layer of hidden units between its inputs and its outputs</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">The artificial neural network used had more than one hidden layer, making it a deep artificial neural network.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;ExtremelyDeepArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="&anno;ExtremelyDeepArtificialNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="&anno;DeepArtificialNeuralNetwork"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasDepth"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="&xsd;integer">10</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">extremely deep artificial neural network</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">an artificial neural network that has ten or more layers of hidden units between its inputs and its outputs</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Cutting edge artificial neural networks are often extremely deep artificial neural networks.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;FeedforwardArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="&anno;FeedforwardArtificialNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="&anno;ArtificialNeuralNetwork"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">https://en.wikipedia.org/wiki/Feedforward_neural_network</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">feedforward artificial neural network</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a neural network with outputs only going to next layer, no output is connected as input into a previous layer</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Depth is a property of Feedforward Artificial Neural Networks.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;FullyConnectedHiddenLayer -->
+
+    <owl:Class rdf:about="&anno;FullyConnectedHiddenLayer">
+        <rdfs:subClassOf rdf:resource="&anno;HiddenLayer"/>
+        <fibo-fnd-utl-av:definitionOrigin>http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>fully connected hidden layer</rdfs:label>
+        <skos:definition>a hidden layer where all the input output connections have been connected</skos:definition>
+        <skos:example>A neural network may have 3 hidden layers that are all fully connected.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;Function -->
+
+    <owl:Class rdf:about="&anno;Function">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isLinear"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isSmooth"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">http://mathworld.wolfram.com/Function.html</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">function</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a relation that uniquely associates members of one set with members of another set</skos:definition>
+        <skos:example>A function is typically performed on members of the set of real numbers.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;GaussianDensityFunction -->
+
+    <owl:Class rdf:about="&anno;GaussianDensityFunction">
+        <rdfs:subClassOf rdf:resource="&anno;ProbabilityDensityFunction"/>
+        <owl:disjointWith rdf:resource="&anno;UniformDensityFunction"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">https://en.wikipedia.org/wiki/Normal_distribution</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">Gaussian probability function</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a continuous symmetric probability density function defined by a mean and a standard deviation</skos:definition>
+        <skos:example>The gaussian density function is symmetric about its mean.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;GaussianInitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;GaussianInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="&anno;ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="&anno;HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMaximumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMinimumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&anno;HeInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;LecunUniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;OrthogonalInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;UniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;ZeroInitializationAlgorithm"/>
+        <fibo-fnd-utl-av:definitionOrigin>Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <sm:dependsOn rdf:resource="&anno;GaussianDensityFunction"/>
+        <rdfs:label>Gaussian initialization algorithm</rdfs:label>
+        <skos:definition>a weight initialization algorithm that picks from a Gaussian distribution.</skos:definition>
+        <skos:example>The recommendation system picked a Gaussian Initialization Algorithm to initialize the network because it was shallow.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;GradientDescentAlgorithm -->
+
+    <owl:Class rdf:about="&anno;GradientDescentAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;TrainingAlgorithm"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">https://en.wikipedia.org/wiki/Gradient_descent</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">gradient descent algorithm</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">an algorithm which provides a way to find a local minimum of a function</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Gradient descent is used for training a neural network</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;HeInitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;HeInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="&anno;ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="&anno;HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMaximumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">100</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMinimumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&anno;LecunUniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;OrthogonalInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;UniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;ZeroInitializationAlgorithm"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:resource="&anno;citation1"/>
+        <rdfs:label>He initialization algorithm</rdfs:label>
+        <skos:definition>a weight initialization function which picks from a probability distribution in a normalized range. This normalized range differs from Xavier initialization in that it considers rectifier nonlinearities</skos:definition>
+        <skos:example>The He initialization algorithm is appropriate for deep artificial neural networks with nonlinear activation functions.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;HiddenLayer -->
+
+    <owl:Class rdf:about="&anno;HiddenLayer">
+        <rdfs:subClassOf rdf:resource="&anno;Layer"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">hidden layer</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a layer responsible for intermediary calculations in a neural network</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Compose neural networks along with individual hidden units.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;HiddenUnit -->
+
+    <owl:Class rdf:about="&anno;HiddenUnit">
+        <rdfs:subClassOf rdf:resource="&anno;Unit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;isMemberOf"/>
+                <owl:someValuesFrom rdf:resource="&anno;HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">&quot;What&apos;s Hidden in the Hidden Layers?&quot;, Touretzky and Pomerleau</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">hidden unit</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">an intermediary unit in an artificial neural network</skos:definition>
+        <skos:example>Hidden units do much of the computation in artificial neural networks.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;HyperbolicTangentActivationFunction -->
+
+    <owl:Class rdf:about="&anno;HyperbolicTangentActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;NonlinearActivationFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isSmooth"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin>https://en.wikipedia.org/wiki/Hyperbolic_function</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>hyperbolic tangent activation function</rdfs:label>
+        <skos:definition>a normalized sigmoidal activation function typically ranging in either (-1, 1) or (0, 1)</skos:definition>
+        <skos:example>The hyperbolic tangent activation function is symmetric about 0.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;Hyperparameter -->
+
+    <owl:Class rdf:about="&anno;Hyperparameter">
+        <rdfs:subClassOf rdf:resource="&fibo-fnd-utl-alx;Variable"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">Colin Raffel</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>hyperparameter</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a variable set before actually optimizing the model&apos;s parameters</skos:definition>
+        <skos:example>Weight initialization function choice is an example of a hyperparameter.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;IdentityInitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;IdentityInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="&anno;ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="&anno;SquareLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="&anno;TwoDimensionalLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMaximumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMinimumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin>http://keras.io/initializations/</fibo-fnd-utl-av:definitionOrigin>
+        <sm:dependsOn rdf:resource="&anno;SquareLayer"/>
+        <sm:dependsOn rdf:resource="&anno;TwoDimensionalLayer"/>
+        <rdfs:label>identity initialization algorithm</rdfs:label>
+        <skos:definition>a weight initialization algorithm appropriate for square two dimensional layers, which makes the N x N weight matrix the N x N identity matrix</skos:definition>
+        <skos:example>The identity initialization algorithm is appropriate for square 2D layers.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;InitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;InitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;Algorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;isPartOf"/>
+                <owl:someValuesFrom rdf:resource="&anno;ArtificialNeuralNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">http://www.dictionary.com/browse/initialise</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">initialization algorithm</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">an algorithm which sets (variables, counters, switches, etc.) to their starting values at the beginning of a program or subprogram</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Neural network weights must be decided with an initialization function.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;Layer -->
+
+    <owl:Class rdf:about="&anno;Layer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&skos;Collection"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;hasPart"/>
+                        <owl:someValuesFrom rdf:resource="&anno;Unit"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="&anno;ArtificialNeuralNetwork"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&skos;Collection"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">layer</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a collection of a number of interconnected units which contain an activation function</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Artificial Neural Networks are comprised of one or more layers.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;LeakyRectifiedLinearActivationFunction -->
+
+    <owl:Class rdf:about="&anno;LeakyRectifiedLinearActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;RectifiedLinearActivationFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isSmooth"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:resource="&anno;citation7"/>
+        <rdfs:label>leaky rectified linear activation function</rdfs:label>
+        <skos:definition>an activation function that has has a non-zero gradient over its entire domain</skos:definition>
+        <skos:example>The leaky rectified linear activation function is a variation of the rectified linear activation function.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;LecunUniformInitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;LecunUniformInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="&anno;ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="&anno;HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMaximumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">5</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMinimumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&anno;OrthogonalInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;UniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;ZeroInitializationAlgorithm"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:resource="&anno;citation3"/>
+        <sm:dependsOn rdf:resource="&anno;UniformDensityFunction"/>
+        <rdfs:label>Lecun initialization algorithm</rdfs:label>
+        <skos:definition>a weight initialization algorithm which picks from a uniform distribution and is scaled by the square root of the number of inputs</skos:definition>
+        <skos:example>The Lecun uniform initialization algorithm was first proposed in 1998.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;LinearActivationFunction -->
+
+    <owl:Class rdf:about="&anno;LinearActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;ActivationFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isLinear"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&anno;NonlinearActivationFunction"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">https://en.wikipedia.org/wiki/Activation_function</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">linear activation function</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">an activation function that is not exponential in any of its inputs</skos:definition>
+        <skos:example>The activation function was linear in its inputs, making it a linear activation function.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;LogisticSigmoidActivationFunction -->
+
+    <owl:Class rdf:about="&anno;LogisticSigmoidActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;NonlinearActivationFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isSmooth"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin>https://en.wikipedia.org/wiki/Sigmoid_function</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>logistic sigmoid activation function</rdfs:label>
+        <skos:definition>a nonlinear activation function exhibiting a sigmoidal curve</skos:definition>
+        <skos:example>The logistic sigmoid activation function is good for measuring probability.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;Model -->
+
+    <owl:Class rdf:about="&anno;Model">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">http://www.dictionary.com/browse/model?s=t</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">model</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a simplified representation of a system or phenomenon, as in the sciences or economics, with any hypotheses required to describe the system or explain the phenomenon, often mathematically</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Computational models are just one kind of model.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;NonlinearActivationFunction -->
+
+    <owl:Class rdf:about="&anno;NonlinearActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;ActivationFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isLinear"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">https://en.wikipedia.org/wiki/Activation_function</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">nonlinear activation function</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">an activation function that is exponential in at least one input</skos:definition>
+        <skos:example>The activation function was not linear in its inputs, making it a non linear activation function.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;OE_bibliographic_citation -->
+
+    <owl:Class rdf:about="&anno;OE_bibliographic_citation">
+        <rdfs:subClassOf rdf:resource="&sm;BibliographicCitation"/>
+        <rdfs:label>OE bibliographic citation.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- &anno;OrthogonalInitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;OrthogonalInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="&anno;ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="&anno;SquareLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="&anno;TwoDimensionalLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMaximumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMinimumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&anno;UniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;ZeroInitializationAlgorithm"/>
+        <fibo-fnd-utl-av:definitionOrigin>http://keras.io/initializations/</fibo-fnd-utl-av:definitionOrigin>
+        <sm:dependsOn rdf:resource="&anno;SquareLayer"/>
+        <sm:dependsOn rdf:resource="&anno;TwoDimensionalLayer"/>
+        <rdfs:label>orthogonal initialization algorithm</rdfs:label>
+        <skos:definition>a weight initialization algorithm appropriate for square two dimensional layers, which makes the N x N weight matrix an N x N orthogonal matrix</skos:definition>
+        <skos:example>The orthogonal initialization algorithm is appropriate for square 2D layers.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;ParametricRectifiedLinearActivationFunction -->
+
+    <owl:Class rdf:about="&anno;ParametricRectifiedLinearActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;RectifiedLinearActivationFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isSmooth"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:resource="&anno;citation7"/>
+        <rdfs:label>parametric rectified linear activation function</rdfs:label>
+        <skos:definition>a rectified activation function which adaptively learns the parameters of the rectifiers, and improves accuracy at negligible extra computational cost</skos:definition>
+        <skos:example>The parametric rectified linear activation function is a variation of the rectified linear activation function.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;ProbabilityDensityFunction -->
+
+    <owl:Class rdf:about="&anno;ProbabilityDensityFunction">
+        <rdfs:subClassOf rdf:resource="&anno;Function"/>
+        <owl:disjointWith rdf:resource="&anno;Unit"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">http://www.dictionary.com/browse/probability-density-function</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">probability distribution function</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a function of a continuous variable whose integral over a region gives the probability that a random variable falls within the region</skos:definition>
+        <skos:example>Weight initialization algorithms select small random values from probability density functions.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;RectifiedLinearActivationFunction -->
+
+    <owl:Class rdf:about="&anno;RectifiedLinearActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;LinearActivationFunction"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:resource="&anno;citation1"/>
+        <rdfs:label rdf:datatype="&xsd;string">rectified linear activation function</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a linear activation function which outputs max(0, x), where x is the input value</skos:definition>
+        <skos:example>The rectified linear activation function was the most popular activation function for deep neural networks in 2015.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;SoftmaxLogisticRegressionActivationFunction -->
+
+    <owl:Class rdf:about="&anno;SoftmaxLogisticRegressionActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;NonlinearActivationFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isSmooth"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin>ftp://ftp.sas.com/pub/neural/FAQ2.html</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>softmax logistic regression activation function</rdfs:label>
+        <skos:definition>a generalization of logistic regression to the case of multiple classes</skos:definition>
+        <skos:example>The softmax logistic regression activation function is symmetric about 0.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;SoftsignActivationFunction -->
+
+    <owl:Class rdf:about="&anno;SoftsignActivationFunction">
+        <rdfs:subClassOf rdf:resource="&anno;NonlinearActivationFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isSmooth"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin>http://cs224d.stanford.edu/lecture_notes/LectureNotes3.pdf</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>softsign activation function</rdfs:label>
+        <skos:definition>a nonlinear activation function exhibiting softer asymptotic behavior than alternative sigmoidal functions</skos:definition>
+        <skos:example>The softsign activation function is symmetric about 0.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;SquareLayer -->
+
+    <owl:Class rdf:about="&anno;SquareLayer">
+        <rdfs:subClassOf rdf:resource="&anno;Layer"/>
+        <fibo-fnd-utl-av:definitionOrigin>http://keras.io/layers/convolutional/</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">square layer</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a layer in a neural network whose inputs&apos; dimensions are all equal</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Many convolutional layers are square layers.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;TrainingAlgorithm -->
+
+    <owl:Class rdf:about="&anno;TrainingAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;Algorithm"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">Y. S. Abu-Mostafa, M. Magdon-Ismail, and H.-T. Lin, Learning from data: a short course. United States: AMLBook.com, 2012.</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">training algorithm</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">an algorithm which uses training data to fine tune the parameters of a machine learning model</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Training of a neural network updates its weights.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;TwoDimensionalLayer -->
+
+    <owl:Class rdf:about="&anno;TwoDimensionalLayer">
+        <rdfs:subClassOf rdf:resource="&anno;Layer"/>
+        <fibo-fnd-utl-av:definitionOrigin>http://keras.io/layers/convolutional/</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">two dimensional layer</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a layer in a neural network which has two dimensional input, such as a digital image</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">Many convolutional layers are two dimensional layers.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;UniformDensityFunction -->
+
+    <owl:Class rdf:about="&anno;UniformDensityFunction">
+        <rdfs:subClassOf rdf:resource="&anno;ProbabilityDensityFunction"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">http://mathworld.wolfram.com/UniformDistribution.html</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">uniform probability function</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a continuous symmetric probability density function characterized by equal values for each input in its range</skos:definition>
+        <skos:example>The uniform density function has an equal chance of selecting any value in its range.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;UniformInitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;UniformInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="&anno;ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="&anno;HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMaximumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMinimumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&anno;XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="&anno;ZeroInitializationAlgorithm"/>
+        <fibo-fnd-utl-av:definitionOrigin>http://keras.io/initializations/</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>uniform initialization algorithm</rdfs:label>
+        <skos:definition>a weight initialization algorithm that picks from a uniform distribution</skos:definition>
+        <skos:example>The uniform initialization algorithm is appropriate for small, simple neural networks.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;Unit -->
+
+    <owl:Class rdf:about="&anno;Unit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&anno;Function"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&anno;hasActivationFunction"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="&anno;ActivationFunction"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;isMemberOf"/>
+                        <owl:someValuesFrom rdf:resource="&anno;Layer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="&anno;ArtificialNeuralNetwork"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&anno;Function"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">https://www.willamette.edu/~gorr/classes/cs449/intro.html</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">unit</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a function performed over the weighted sum of its inputs in an artificial neural network</skos:definition>
+        <skos:example>Layers are composed of one or more units.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;Weight -->
+
+    <owl:Class rdf:about="&anno;Weight">
+        <rdfs:subClassOf rdf:resource="&fibo-fnd-utl-alx;Variable"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fibo-fnd-utl-bt;hasNumericValue"/>
+                <owl:someValuesFrom rdf:resource="&fibo-fnd-utl-bt;number"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">David Leverington</fibo-fnd-utl-av:definitionOrigin>
+        <sm:dependsOn rdf:datatype="&xsd;string">artificial neural network</sm:dependsOn>
+        <rdfs:label rdf:datatype="&xsd;string">weight</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">values associated with each vector and node in the network, which constrain how input data (e.g., satellite image values) are related to output data (e.g., land-cover classes).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- &anno;WeightInitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;WeightInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;InitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMaximumCompatibleDepth"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMinimumCompatibleDepth"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <sm:dependsOn rdf:datatype="&xsd;string">Initialization algorithm.</sm:dependsOn>
+        <sm:dependsOn rdf:datatype="&xsd;string">artificial neural network</sm:dependsOn>
+        <sm:dependsOn rdf:datatype="&xsd;string">weight</sm:dependsOn>
+        <rdfs:label rdf:datatype="&xsd;string">weight initialization algorithm</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">an algorithm used to initialize the weights of a neural network by randomly choosing from a probablility distribution</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">The recommendation system chose a weight initialization algorithm to initialize the network.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;XavierInitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;XavierInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="&anno;LinearActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="&anno;HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMaximumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">100</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMinimumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&anno;ZeroInitializationAlgorithm"/>
+        <fibo-fnd-utl-av:definitionOrigin rdf:resource="&anno;citation2"/>
+        <rdfs:label>Xavier initialization algorithm</rdfs:label>
+        <skos:definition>a weight initialization function which picks from a probability distribution in a normalized range</skos:definition>
+        <skos:example>The recommendation system picked a Xavier Initialization Algorithm to initialize the network because it was deep.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &anno;ZeroInitializationAlgorithm -->
+
+    <owl:Class rdf:about="&anno;ZeroInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="&anno;WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithActivationFunction"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="&anno;ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;isCompatibleWithLayerType"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="&anno;Layer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMaximumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&anno;hasMinimumCompatibleDepth"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <fibo-fnd-utl-av:definitionOrigin>http://keras.io/initializations/</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label>zero initialization algorithm</rdfs:label>
+        <skos:definition>a weight initialization algorithm which assigns a value of zero to each weight</skos:definition>
+        <skos:example>The zero initialization algorithm should almost always be avoided.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &np;Assertion -->
+
+    <owl:Class rdf:about="&np;Assertion"/>
+    
+
+
+    <!-- &np;Nanopublication -->
+
+    <owl:Class rdf:about="&np;Nanopublication"/>
+    
+
+
+    <!-- &np;Provenance -->
+
+    <owl:Class rdf:about="&np;Provenance"/>
+    
+
+
+    <!-- &np;PublicationInfo -->
+
+    <owl:Class rdf:about="&np;PublicationInfo"/>
+    
+
+
+    <!-- &prov;Agent -->
+
+    <owl:Class rdf:about="&prov;Agent"/>
+    
+
+
+    <!-- &prov;Person -->
+
+    <owl:Class rdf:about="&prov;Person"/>
+    
+
+
+    <!-- &foaf;Person -->
+
+    <owl:Class rdf:about="&foaf;Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &anno;citation -->
+
+    <owl:NamedIndividual rdf:about="&anno;citation">
+        <rdf:type rdf:resource="&anno;OE_bibliographic_citation"/>
+        <dct:source rdf:datatype="&xsd;string">Boca Raton, FL: CRC Press, pp. 531 and 533</dct:source>
+        <sm:author rdf:datatype="&xsd;string"> Beyer, W. H. </sm:author>
+        <sm:publicationDate rdf:datatype="&xsd;string">1987</sm:publicationDate>
+        <rdfs:label rdf:datatype="&xsd;string">Standard Mathematical Tables , 28th ed.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &anno;citation1 -->
+
+    <owl:NamedIndividual rdf:about="&anno;citation1">
+        <rdf:type rdf:resource="&anno;OE_bibliographic_citation"/>
+        <dct:source rdf:datatype="&xsd;string">IEEE International Conference on Computer Vision (ICCV)</dct:source>
+        <sm:author rdf:datatype="&xsd;string">K. He, X. Zhang, S. Ren, and J. Sun</sm:author>
+        <sm:publicationDate rdf:datatype="&xsd;string">2015</sm:publicationDate>
+        <rdfs:label rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &anno;citation2 -->
+
+    <owl:NamedIndividual rdf:about="&anno;citation2">
+        <rdf:type rdf:resource="&anno;OE_bibliographic_citation"/>
+        <dct:source rdf:datatype="&xsd;string">International conference on artificial intelligence and statistics  pp. 249-256</dct:source>
+        <sm:author rdf:datatype="&xsd;string">X. Glorot, Y Bengio</sm:author>
+        <sm:publicationDate rdf:datatype="&xsd;string">2010</sm:publicationDate>
+        <rdfs:label rdf:datatype="&xsd;string">Understanding the difficulty of training deep feedforward neural networks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &anno;citation3 -->
+
+    <owl:NamedIndividual rdf:about="&anno;citation3">
+        <rdf:type rdf:resource="&anno;OE_bibliographic_citation"/>
+        <dct:source rdf:datatype="&xsd;string">Lecture Notes in Computer Science Neural Networks: Tricks of the Trade, pp. 9-50</dct:source>
+        <sm:author rdf:datatype="&xsd;string">Y. Lecun, L. Bottou, G. B. Orr, and K.-R. Muller</sm:author>
+        <sm:publicationDate rdf:datatype="&xsd;string">1998</sm:publicationDate>
+        <rdfs:label rdf:datatype="&xsd;string">Efficient BackProp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &anno;citation4 -->
+
+    <owl:NamedIndividual rdf:about="&anno;citation4">
+        <rdf:type rdf:resource="&anno;OE_bibliographic_citation"/>
+        <dct:source rdf:datatype="&xsd;string">Neurocomputing</dct:source>
+        <sm:author rdf:datatype="&xsd;string">J. Y. F. Yam and T. W. S. Chow</sm:author>
+        <sm:publicationDate rdf:datatype="&xsd;string">2000</sm:publicationDate>
+        <rdfs:label rdf:datatype="&xsd;string">A weight initialization method for improving training speed in feedforward neural network</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &anno;citation5 -->
+
+    <owl:NamedIndividual rdf:about="&anno;citation5">
+        <rdf:type rdf:resource="&anno;OE_bibliographic_citation"/>
+        <dct:source rdf:datatype="&xsd;string"> Berlin: Springer pp 437-478</dct:source>
+        <sm:author rdf:datatype="&xsd;string">Montavon Gregoire, Orr Genevie`ve B., Muller Klaus-Robert, and Y. Bengio</sm:author>
+        <sm:publicationDate rdf:datatype="&xsd;string">2012</sm:publicationDate>
+        <rdfs:label rdf:datatype="&xsd;string"> Neural networks tricks of the trade</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &anno;citation6 -->
+
+    <owl:NamedIndividual rdf:about="&anno;citation6">
+        <rdf:type rdf:resource="&anno;OE_bibliographic_citation"/>
+        <dct:source rdf:datatype="&xsd;string">arXiv preprint arXiv:1207.0580</dct:source>
+        <sm:author rdf:datatype="&xsd;string">G. E. Hinton, N. Srivastava, A. Krizhevsky, I. Sutskever, and R. Salakhutdinov</sm:author>
+        <sm:publicationDate rdf:datatype="&xsd;string">2012</sm:publicationDate>
+        <rdfs:label rdf:datatype="&xsd;string">Improving neural networks by preventing co-adaptation of feature detectors,</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &anno;citation7 -->
+
+    <owl:NamedIndividual rdf:about="&anno;citation7">
+        <rdf:type rdf:resource="&anno;OE_bibliographic_citation"/>
+        <dct:source rdf:datatype="&xsd;string">Neural Networks 16, no. 5</dct:source>
+        <sm:author rdf:datatype="&xsd;string">Matsugu, Masakazu, Katsuhiko Mori, Yusuke Mitari, and Yuji Kaneda</sm:author>
+        <sm:publicationDate rdf:datatype="&xsd;string">2003</sm:publicationDate>
+        <rdfs:label rdf:datatype="&xsd;string">Subject independent facial expression recognition with robust face detection using a convolutional neural network.</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+        <pav:authoredBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="&dct;Agent"/>
+                <rdf:type rdf:resource="&foaf;Person"/>
+            </rdf:Description>
+        </pav:authoredBy>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homePage rdf:resource="http://research.microsoft.com/en-us/um/people/kahe/"/>
+        <foaf:mbox rdf:resource="mailto:kahe@microsoft.com"/>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    <rdf:Description>
+        <dct:title rdf:datatype="&xsd;string">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</dct:title>
+        <dct:title rdf:datatype="&xsd;string">Understanding the Difficulty of Training Deep Feedforward Neural Networks</dct:title>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&anno;hasMinimumCompatibleDepth">
+        <fibo-fnd-utl-av:definitionOrigin rdf:datatype="&xsd;string">Artificial Neural Network Ontology</fibo-fnd-utl-av:definitionOrigin>
+        <rdfs:label rdf:datatype="&xsd;string">has minimum compatible depth</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">Indicates the minimum artificial neural network depth with which a weight initialization algorithm can be used.</skos:definition>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&anno;HyperbolicTangentActivationFunction"/>
+            <rdf:Description rdf:about="&anno;LogisticSigmoidActivationFunction"/>
+            <rdf:Description rdf:about="&anno;SoftmaxLogisticRegressionActivationFunction"/>
+            <rdf:Description rdf:about="&anno;SoftsignActivationFunction"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

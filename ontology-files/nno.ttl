@@ -1,0 +1,1026 @@
+@prefix : <https://w3id.org/nno/ontology#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <https://w3id.org/nno/ontology> .
+
+<https://w3id.org/nno/ontology> rdf:type owl:Ontology ;
+                                 dc:title "The FAIRnets Ontology" ;
+                                 owl:versionInfo 2.0 ;
+                                 rdfs:comment """This is the FAIRnets Ontology. Designed by the AIFB (http://www.aifb.kit.edu).
+It enables to formalize Artificial Neural Networks in RDF, making it possible to represent existing Neural Networks according the FAIR principles.""" ;
+                                 dc:issued "2019-03-22" ;
+                                 vann:preferredNamespaceUri "https://w3id.org/nno/ontology#" ;
+                                 rdfs:label "The FAIRnets Ontology" ;
+                                 vs:term_status "stable" ;
+                                 vann:preferredNamespacePrefix "nno" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/issued
+dc:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+vs:term_status rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/nno/ontology#hasLayer
+:hasLayer rdf:type owl:ObjectProperty ;
+          rdfs:domain :Model ;
+          rdfs:range :Layer ;
+          rdfs:comment "Layer of the Neural Network." ;
+          rdfs:label "has layer" .
+
+
+###  https://w3id.org/nno/ontology#hasLossFunction
+:hasLossFunction rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Model ;
+                 rdfs:range :LossFunction ;
+                 rdfs:comment "Loss function used by Neural Network." ;
+                 rdfs:label "has loss function" .
+
+
+###  https://w3id.org/nno/ontology#hasModel
+:hasModel rdf:type owl:ObjectProperty ;
+          rdfs:domain :NeuralNetwork ;
+          rdfs:range :Model ;
+          rdfs:comment "Model of the repository." ;
+          rdfs:label "has model" .
+
+
+###  https://w3id.org/nno/ontology#hasOptimizer
+:hasOptimizer rdf:type owl:ObjectProperty ;
+              rdfs:domain :Model ;
+              rdfs:range :Optimizer ;
+              rdfs:comment "Optimization function used by Neural Network (e.g. SGD, Adam or RMSprop)." ;
+              rdfs:label "has optimizer" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dc:created rdf:type owl:DatatypeProperty ;
+           rdfs:domain :NeuralNetwork ;
+           rdfs:range xsd:dateTime .
+
+
+###  http://purl.org/dc/terms/creator
+dc:creator rdf:type owl:DatatypeProperty ;
+           rdfs:domain :NeuralNetwork ;
+           rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/dc/terms/description
+dc:description rdf:type owl:DatatypeProperty ;
+               rdfs:domain :NeuralNetwork ;
+               rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/license
+dc:license rdf:type owl:DatatypeProperty ;
+           rdfs:domain :NeuralNetwork ;
+           rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/dc/terms/modified
+dc:modified rdf:type owl:DatatypeProperty ;
+            rdfs:domain :NeuralNetwork ;
+            rdfs:range xsd:dateTime .
+
+
+###  http://purl.org/dc/terms/publisher
+dc:publisher rdf:type owl:DatatypeProperty ;
+             rdfs:domain :NeuralNetwork ;
+             rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/dc/terms/references
+dc:references rdf:type owl:DatatypeProperty ;
+              rdfs:domain :NeuralNetwork ;
+              rdfs:range xsd:anyURI .
+
+
+###  http://usefulinc.com/ns/doap#category
+<http://usefulinc.com/ns/doap#category> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain :NeuralNetwork ;
+                                        rdfs:range rdfs:Literal ;
+                                        rdfs:comment "indicates an assigned topic" .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain :Layer ;
+                    rdfs:range xsd:nonNegativeInteger .
+
+
+###  https://w3id.org/nno/ontology#dataset
+:dataset rdf:type owl:DatatypeProperty ;
+         rdfs:domain :NeuralNetwork ;
+         rdfs:range xsd:anyURI ;
+         rdfs:comment "Describes the used dataset for training and evaluating" ;
+         rdfs:label "data set" .
+
+
+###  https://w3id.org/nno/ontology#hasBaseModel
+:hasBaseModel rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Model ;
+              rdfs:comment "Base model from keras application" ;
+              rdfs:label "has base model" .
+
+
+###  https://w3id.org/nno/ontology#hasBaseModelKeywords
+:hasBaseModelKeywords rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :BaseModel ;
+                      rdfs:comment "Keywords of base model" ;
+                      rdfs:label "has base model keywords" .
+
+
+###  https://w3id.org/nno/ontology#hasDownloadCount
+:hasDownloadCount rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :NeuralNetwork ;
+                  rdfs:range xsd:nonNegativeInteger ;
+                  rdfs:comment "Number of downloads for this particular model." ;
+                  rdfs:label "has download count" .
+
+
+###  https://w3id.org/nno/ontology#hasLayerKeywords
+:hasLayerKeywords rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Layer ;
+                  rdfs:range rdfs:Literal ;
+                  rdfs:comment "Keywords of a layer" ;
+                  rdfs:label "has layer keywords" .
+
+
+###  https://w3id.org/nno/ontology#hasLayerParameters
+:hasLayerParameters rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Layer ;
+                    rdfs:range rdfs:Literal ;
+                    rdfs:comment "Parameters of a layer" ;
+                    rdfs:label "has layer parameters" .
+
+
+###  https://w3id.org/nno/ontology#hasLayerSequence
+:hasLayerSequence rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Layer ;
+                  rdfs:range xsd:integer ;
+                  rdfs:comment "Specifies the sequence of the layers. Starts at 1, the number of layers is n-1, at n: Number of layers." ;
+                  rdfs:label "has layer sequence" .
+
+
+###  https://w3id.org/nno/ontology#hasMetric
+:hasMetric rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Model ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment """Reflects potential real-world impact of the Model.
+Determines the Accuracy, Precision etc. of the model.""" ;
+           rdfs:label "has metric" .
+
+
+###  https://w3id.org/nno/ontology#hasModelSequence
+:hasModelSequence rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range xsd:integer ;
+                  rdfs:comment "Specifies the sequence of models, starts at 1" ;
+                  rdfs:label "has model sequence" .
+
+
+###  https://w3id.org/nno/ontology#hasModelType
+:hasModelType rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Model ;
+              rdfs:range xsd:anyURI ;
+              rdfs:comment "type of the model" ;
+              rdfs:label "has model type" .
+
+
+###  https://w3id.org/nno/ontology#hasRepositoryLink
+:hasRepositoryLink rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :NeuralNetwork ;
+                   rdfs:range xsd:anyURI ;
+                   rdfs:comment "Link to the respository (e.g. github) where the model and further information can be found." ;
+                   rdfs:label "has repository link" .
+
+
+###  https://w3id.org/nno/ontology#hasintendedUse
+:hasintendedUse rdf:type owl:DatatypeProperty ;
+                rdfs:domain :NeuralNetwork ;
+                rdfs:range xsd:anyURI ;
+                rdfs:comment "Primary intended use and users (domain) for which the Neural Network was trained for." ;
+                rdfs:label "has intended use" .
+
+
+###  https://w3id.org/nno/ontology#stars
+:stars rdf:type owl:DatatypeProperty ;
+       rdfs:domain :NeuralNetwork ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "indicates watchers count" ;
+       rdfs:label "stars" .
+
+
+###  https://w3id.org/nno/ontology#usedFramework
+:usedFramework rdf:type owl:DatatypeProperty ;
+               rdfs:domain :NeuralNetwork ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "Framework (e.g. Keras, Pandas, numpy, etc.) used to create this model." ;
+               rdfs:label "used framework" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class ;
+                  rdfs:comment "Organization the person belongs to." .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class ;
+            rdfs:comment "Person who makes this ontology." .
+
+
+###  https://w3id.org/nno/ontology#Activation
+:Activation rdf:type owl:Class ;
+            rdfs:subClassOf :CoreLayer ;
+            rdfs:comment "Applies an activation function to an output." ;
+            rdfs:label "Activation Layer" .
+
+
+###  https://w3id.org/nno/ontology#ActivityRegularization
+:ActivityRegularization rdf:type owl:Class ;
+                        rdfs:subClassOf :CoreLayer ;
+                        rdfs:comment "Layer that applies an update to the cost function based input activity." ;
+                        rdfs:label "Activity Regularization Layer" .
+
+
+###  https://w3id.org/nno/ontology#AveragePooling1D
+:AveragePooling1D rdf:type owl:Class ;
+                  rdfs:subClassOf :PoolingLayer ;
+                  rdfs:comment "Average pooling for temporal data." ;
+                  rdfs:label "Average Pooling 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#AveragePooling2D
+:AveragePooling2D rdf:type owl:Class ;
+                  rdfs:subClassOf :PoolingLayer ;
+                  rdfs:comment "Average pooling operation for spatial data." ;
+                  rdfs:label "Average Pooling 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#AveragePooling3D
+:AveragePooling3D rdf:type owl:Class ;
+                  rdfs:subClassOf :PoolingLayer ;
+                  rdfs:comment "Average pooling operation for 3D data (spatial or spatio-temporal)." ;
+                  rdfs:label "Average Pooling 3D Layer" .
+
+
+###  https://w3id.org/nno/ontology#BaseModel
+:BaseModel rdf:type owl:Class ;
+           rdfs:subClassOf :Layer ;
+           rdfs:comment "Base model from keras application" ;
+           rdfs:label "Base Model" .
+
+
+###  https://w3id.org/nno/ontology#BatchNormalization
+:BatchNormalization rdf:type owl:Class ;
+                    rdfs:subClassOf :NormalizationLayer ;
+                    rdfs:comment """Batch normalization layer (Ioffe and Szegedy, 2014).
+
+Normalize the activations of the previous layer at each batch, i.e. applies a transformation that maintains the mean activation close to 0 and the activation standard deviation close to 1.""" ;
+                    rdfs:label "Batch Normalization Layer" .
+
+
+###  https://w3id.org/nno/ontology#ClassificationLoss
+:ClassificationLoss rdf:type owl:Class ;
+                    rdfs:subClassOf :LossFunction ;
+                    rdfs:comment "Loss function typically used for classification problems." ;
+                    rdfs:label "Classification Loss Function" .
+
+
+###  https://w3id.org/nno/ontology#Conv1D
+:Conv1D rdf:type owl:Class ;
+        rdfs:subClassOf :ConvolutionalLayer ;
+        rdfs:comment """1D convolution layer (e.g. temporal convolution).
+
+This layer creates a convolution kernel that is convolved with the layer input over a single spatial (or temporal) dimension to produce a tensor of outputs.""" ;
+        rdfs:label "Convolutional 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#Conv2D
+:Conv2D rdf:type owl:Class ;
+        rdfs:subClassOf :ConvolutionalLayer ;
+        rdfs:comment """2D convolution layer (e.g. spatial convolution over images).
+
+This layer creates a convolution kernel that is convolved with the layer input to produce a tensor of outputs.""" ;
+        rdfs:label "Convolutional 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#Conv2DTranspose
+:Conv2DTranspose rdf:type owl:Class ;
+                 rdfs:subClassOf :ConvolutionalLayer ;
+                 rdfs:comment """Transposed convolution layer (sometimes called Deconvolution).
+
+The need for transposed convolutions generally arises from the desire to use a transformation going in the opposite direction of a normal convolution, i.e., from something that has the shape of the output of some convolution to something that has the shape of its input while maintaining a connectivity pattern that is compatible with said convolution.""" ;
+                 rdfs:label "Convolutional 2D Transpose Layer" .
+
+
+###  https://w3id.org/nno/ontology#Conv3D
+:Conv3D rdf:type owl:Class ;
+        rdfs:subClassOf :ConvolutionalLayer ;
+        rdfs:comment """3D convolution layer (e.g. spatial convolution over volumes).
+
+This layer creates a convolution kernel that is convolved with the layer input to produce a tensor of outputs.""" ;
+        rdfs:label "Convolutional 3D Layer" .
+
+
+###  https://w3id.org/nno/ontology#Conv3DTranspose
+:Conv3DTranspose rdf:type owl:Class ;
+                 rdfs:subClassOf :ConvolutionalLayer ;
+                 rdfs:comment """Transposed convolution layer (sometimes called Deconvolution).
+
+The need for transposed convolutions generally arises from the desire to use a transformation going in the opposite direction of a normal convolution, i.e., from something that has the shape of the output of some convolution to something that has the shape of its input while maintaining a connectivity pattern that is compatible with said convolution.""" ;
+                 rdfs:label "Convolutional 3D Transpose Layer" .
+
+
+###  https://w3id.org/nno/ontology#ConvLSTM2D
+:ConvLSTM2D rdf:type owl:Class ;
+            rdfs:subClassOf :RecurrentLayer ;
+            rdfs:comment """Convolutional LSTM.
+
+It is similar to an LSTM layer, but the input transformations and recurrent transformations are both convolutional.""" ;
+            rdfs:label "Convolutional LSTM 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#ConvLSTM2DCell
+:ConvLSTM2DCell rdf:type owl:Class ;
+                rdfs:subClassOf :RecurrentLayer ;
+                rdfs:comment "Cell class for the ConvLSTM2D layer." ;
+                rdfs:label "Convolutional LSTM 2D Cell Layer" .
+
+
+###  https://w3id.org/nno/ontology#ConvolutionalLayer
+:ConvolutionalLayer rdf:type owl:Class ;
+                    rdfs:subClassOf :Layer ;
+                    rdfs:label "Convolutional Layer" ;
+                    rdfs:seeAlso "https://keras.io/layers/convolutional/" .
+
+
+###  https://w3id.org/nno/ontology#CoreLayer
+:CoreLayer rdf:type owl:Class ;
+           rdfs:subClassOf :Layer ;
+           rdfs:label "Core Layer" ;
+           rdfs:seeAlso "https://keras.io/layers/core/" .
+
+
+###  https://w3id.org/nno/ontology#Cropping1D
+:Cropping1D rdf:type owl:Class ;
+            rdfs:subClassOf :ConvolutionalLayer ;
+            rdfs:comment """Cropping layer for 1D input (e.g. temporal sequence).
+
+It crops along the time dimension (axis 1).""" ;
+            rdfs:label "Cropping 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#Cropping2D
+:Cropping2D rdf:type owl:Class ;
+            rdfs:subClassOf :ConvolutionalLayer ;
+            rdfs:comment """Cropping layer for 2D input (e.g. picture).
+
+It crops along spatial dimensions, i.e. height and width.""" ;
+            rdfs:label "Cropping 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#Cropping3D
+:Cropping3D rdf:type owl:Class ;
+            rdfs:subClassOf :ConvolutionalLayer ;
+            rdfs:comment "Cropping layer for 3D data (e.g. spatial or spatio-temporal)." ;
+            rdfs:label "Cropping 3D Layer" .
+
+
+###  https://w3id.org/nno/ontology#CuDNNGRU
+:CuDNNGRU rdf:type owl:Class ;
+          rdfs:subClassOf :RecurrentLayer ;
+          rdfs:comment """Fast GRU implementation backed by CuDNN.
+
+Can only be run on GPU, with the TensorFlow backend.""" ;
+          rdfs:label "CuDNN GRU Layer" ;
+          rdfs:seeAlso "https://developer.nvidia.com/cudnn" .
+
+
+###  https://w3id.org/nno/ontology#CuDNNLSTM
+:CuDNNLSTM rdf:type owl:Class ;
+           rdfs:subClassOf :RecurrentLayer ;
+           rdfs:comment """Fast LSTM implementation with CuDNN.
+
+Can only be run on GPU, with the TensorFlow backend.""" ;
+           rdfs:label "CuDNN LSTM Layer" ;
+           rdfs:seeAlso "https://developer.nvidia.com/cudnn" .
+
+
+###  https://w3id.org/nno/ontology#CustomLayer
+:CustomLayer rdf:type owl:Class ;
+             rdfs:subClassOf :Layer ;
+             rdfs:comment "Custom layer defined by user" ;
+             rdfs:label "Custom Layer" .
+
+
+###  https://w3id.org/nno/ontology#Dense
+:Dense rdf:type owl:Class ;
+       rdfs:subClassOf :CoreLayer ;
+       rdfs:comment "Just your regular densely-connected NN layer." ;
+       rdfs:label "Dense Layer" .
+
+
+###  https://w3id.org/nno/ontology#DepthwiseConv2D
+:DepthwiseConv2D rdf:type owl:Class ;
+                 rdfs:subClassOf :ConvolutionalLayer ;
+                 rdfs:comment """Depthwise separable 2D convolution.
+
+Depthwise Separable convolutions consists in performing just the first step in a depthwise spatial convolution (which acts on each input channel separately).""" ;
+                 rdfs:label "Depthwise Convolutional 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#Dropout
+:Dropout rdf:type owl:Class ;
+         rdfs:subClassOf :CoreLayer ;
+         rdfs:comment "Applies Dropout to the input." ;
+         rdfs:label "Dropout Layer" .
+
+
+###  https://w3id.org/nno/ontology#Embedding
+:Embedding rdf:type owl:Class ;
+           rdfs:subClassOf :EmbeddingLayer ;
+           rdfs:comment "Turns positive integers (indexes) into dense vectors of fixed size." ;
+           rdfs:label "Embedding Layer" .
+
+
+###  https://w3id.org/nno/ontology#EmbeddingLayer
+:EmbeddingLayer rdf:type owl:Class ;
+                rdfs:subClassOf :Layer ;
+                rdfs:label "Embedding Layer" ;
+                rdfs:seeAlso "https://keras.io/layers/embeddings/" .
+
+
+###  https://w3id.org/nno/ontology#Flatten
+:Flatten rdf:type owl:Class ;
+         rdfs:subClassOf :CoreLayer ;
+         rdfs:comment "Flattens the input. Does not affect the batch size." ;
+         rdfs:label "Flatten Layer" .
+
+
+###  https://w3id.org/nno/ontology#GRU
+:GRU rdf:type owl:Class ;
+     rdfs:subClassOf :RecurrentLayer ;
+     rdfs:comment """Gated Recurrent Unit - Cho et al. 2014.
+
+There are two variants. The default one is based on 1406.1078v3 and has reset gate applied to hidden state before matrix multiplication. The other one is based on original 1406.1078v1 and has the order reversed.""" ;
+     rdfs:label "GRU Layer" .
+
+
+###  https://w3id.org/nno/ontology#GRUCell
+:GRUCell rdf:type owl:Class ;
+         rdfs:subClassOf :RecurrentLayer ;
+         rdfs:comment "Cell class for the GRU layer." ;
+         rdfs:label "GRU Cell Layer" .
+
+
+###  https://w3id.org/nno/ontology#GlobalAveragePooling1D
+:GlobalAveragePooling1D rdf:type owl:Class ;
+                        rdfs:subClassOf :PoolingLayer ;
+                        rdfs:comment "Global average pooling operation for temporal data." ;
+                        rdfs:label "Global Average Pooling 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#GlobalAveragePooling2D
+:GlobalAveragePooling2D rdf:type owl:Class ;
+                        rdfs:subClassOf :PoolingLayer ;
+                        rdfs:comment "Global average pooling operation for spatial data." ;
+                        rdfs:label "Global Average Pooling 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#GlobalAveragePooling3D
+:GlobalAveragePooling3D rdf:type owl:Class ;
+                        rdfs:subClassOf :PoolingLayer ;
+                        rdfs:comment "Global Average pooling operation for 3D data." ;
+                        rdfs:label "Global Average Pooling 3D Layer" .
+
+
+###  https://w3id.org/nno/ontology#GlobalMaxPooling1D
+:GlobalMaxPooling1D rdf:type owl:Class ;
+                    rdfs:subClassOf :PoolingLayer ;
+                    rdfs:comment "Global max pooling operation for temporal data." ;
+                    rdfs:label "Global Max Pooling 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#GlobalMaxPooling2D
+:GlobalMaxPooling2D rdf:type owl:Class ;
+                    rdfs:subClassOf :PoolingLayer ;
+                    rdfs:comment "Global max pooling operation for spatial data." ;
+                    rdfs:label "Global Max Pooling 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#GlobalMaxPooling3D
+:GlobalMaxPooling3D rdf:type owl:Class ;
+                    rdfs:subClassOf :PoolingLayer ;
+                    rdfs:comment "Global Max pooling operation for 3D data." ;
+                    rdfs:label "Global Max Pooling 3D Layer" .
+
+
+###  https://w3id.org/nno/ontology#Input
+:Input rdf:type owl:Class ;
+       rdfs:subClassOf :CoreLayer ;
+       rdfs:comment """Input() is used to instantiate a Keras tensor.
+
+A Keras tensor is a tensor object from the underlying backend (Theano, TensorFlow or CNTK), which we augment with certain attributes that allow us to build a Keras model just by knowing the inputs and outputs of the model.""" ;
+       rdfs:label "Input Layer" .
+
+
+###  https://w3id.org/nno/ontology#InputLayer
+:InputLayer rdf:type owl:Class ;
+            rdfs:subClassOf :Layer ;
+            rdfs:comment "Input (e.g. data set)." ;
+            rdfs:label "Input Layer" .
+
+
+###  https://w3id.org/nno/ontology#LSTM
+:LSTM rdf:type owl:Class ;
+      rdfs:subClassOf :RecurrentLayer ;
+      rdfs:comment "Long Short-Term Memory layer - Hochreiter 1997." ;
+      rdfs:label "LSTM Layer" .
+
+
+###  https://w3id.org/nno/ontology#LSTMCell
+:LSTMCell rdf:type owl:Class ;
+          rdfs:subClassOf :RecurrentLayer ;
+          rdfs:label "Cell class for the LSTM layer." ,
+                     "LSTM Cell Layer" .
+
+
+###  https://w3id.org/nno/ontology#Lambda
+:Lambda rdf:type owl:Class ;
+        rdfs:subClassOf :CoreLayer ;
+        rdfs:comment "Wraps arbitrary expression as a Layer object." ;
+        rdfs:label "Lambda Layer" .
+
+
+###  https://w3id.org/nno/ontology#Layer
+:Layer rdf:type owl:Class ;
+       rdfs:comment "Layer of the neural network." ;
+       rdfs:label "Layer" .
+
+
+###  https://w3id.org/nno/ontology#Locally-connectedLayer
+:Locally-connectedLayer rdf:type owl:Class ;
+                        rdfs:subClassOf :Layer ;
+                        rdfs:label "Locally-connected Layer" ;
+                        rdfs:seeAlso "https://keras.io/layers/local/" .
+
+
+###  https://w3id.org/nno/ontology#LocallyConnected1D
+:LocallyConnected1D rdf:type owl:Class ;
+                    rdfs:subClassOf :Locally-connectedLayer ;
+                    rdfs:comment "Locally-connected layer for 1D inputs." ;
+                    rdfs:label "Locally-connected 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#LocallyConnected2D
+:LocallyConnected2D rdf:type owl:Class ;
+                    rdfs:subClassOf :Locally-connectedLayer ;
+                    rdfs:comment "Locally-connected layer for 2D inputs." ;
+                    rdfs:label "Locally-connected 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#LossFunction
+:LossFunction rdf:type owl:Class ;
+              rdfs:comment "Loss function used by Neural Network." ;
+              rdfs:label "Loss Function" .
+
+
+###  https://w3id.org/nno/ontology#Masking
+:Masking rdf:type owl:Class ;
+         rdfs:subClassOf :CoreLayer ;
+         rdfs:comment "Masks a sequence by using a mask value to skip timesteps." ;
+         rdfs:label "Masking Layer" .
+
+
+###  https://w3id.org/nno/ontology#MaxPooling1D
+:MaxPooling1D rdf:type owl:Class ;
+              rdfs:subClassOf :PoolingLayer ;
+              rdfs:comment "Max pooling operation for temporal data." ;
+              rdfs:label "Max Pooling 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#MaxPooling2D
+:MaxPooling2D rdf:type owl:Class ;
+              rdfs:subClassOf :PoolingLayer ;
+              rdfs:comment "Max pooling operation for spatial data." ;
+              rdfs:label "Max Pooling 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#MaxPooling3D
+:MaxPooling3D rdf:type owl:Class ;
+              rdfs:subClassOf :PoolingLayer ;
+              rdfs:comment "Max pooling operation for 3D data (spatial or spatio-temporal)." ;
+              rdfs:label "Max Pooling 3D Layer" .
+
+
+###  https://w3id.org/nno/ontology#Model
+:Model rdf:type owl:Class ;
+       rdfs:comment "Model of the repository." ;
+       rdfs:label "Model" .
+
+
+###  https://w3id.org/nno/ontology#NeuralNetwork
+:NeuralNetwork rdf:type owl:Class ;
+               rdfs:label "Neural Network" .
+
+
+###  https://w3id.org/nno/ontology#NormalizationLayer
+:NormalizationLayer rdf:type owl:Class ;
+                    rdfs:subClassOf :Layer ;
+                    rdfs:label "Normalization Layer" ;
+                    rdfs:seeAlso "https://keras.io/layers/normalization/" .
+
+
+###  https://w3id.org/nno/ontology#Optimizer
+:Optimizer rdf:type owl:Class ;
+           rdfs:comment "Optimizer used by Neural Network." ;
+           rdfs:label "Optimizer" .
+
+
+###  https://w3id.org/nno/ontology#Permute
+:Permute rdf:type owl:Class ;
+         rdfs:subClassOf :CoreLayer ;
+         rdfs:comment """Permutes the dimensions of the input according to a given pattern.
+
+Useful for e.g. connecting RNNs and convnets together.""" ;
+         rdfs:label "Permute Layer" .
+
+
+###  https://w3id.org/nno/ontology#PoolingLayer
+:PoolingLayer rdf:type owl:Class ;
+              rdfs:subClassOf :Layer ;
+              rdfs:label "Pooling Layer" ;
+              rdfs:seeAlso "https://keras.io/layers/pooling/" .
+
+
+###  https://w3id.org/nno/ontology#RNN
+:RNN rdf:type owl:Class ;
+     rdfs:subClassOf :RecurrentLayer .
+
+
+###  https://w3id.org/nno/ontology#RecurrentLayer
+:RecurrentLayer rdf:type owl:Class ;
+                rdfs:subClassOf :Layer ;
+                rdfs:label "Recurrent Layer" ;
+                rdfs:seeAlso "https://keras.io/layers/recurrent/" .
+
+
+###  https://w3id.org/nno/ontology#RegressiveLoss
+:RegressiveLoss rdf:type owl:Class ;
+                rdfs:subClassOf :LossFunction ;
+                rdfs:comment "Loss function typically used for regression problems." ;
+                rdfs:label "Regression Loss Function" .
+
+
+###  https://w3id.org/nno/ontology#RepeatVector
+:RepeatVector rdf:type owl:Class ;
+              rdfs:subClassOf :CoreLayer ;
+              rdfs:comment "Repeats the input n times." ;
+              rdfs:label "Repeat Vector Layer" .
+
+
+###  https://w3id.org/nno/ontology#Reshape
+:Reshape rdf:type owl:Class ;
+         rdfs:subClassOf :CoreLayer ;
+         rdfs:comment "Reshapes an output to a certain shape." ;
+         rdfs:label "Reshape Layer" .
+
+
+###  https://w3id.org/nno/ontology#SeparableConv1D
+:SeparableConv1D rdf:type owl:Class ;
+                 rdfs:subClassOf :ConvolutionalLayer ;
+                 rdfs:comment """Depthwise separable 1D convolution.
+
+Separable convolutions consist in first performing a depthwise spatial convolution (which acts on each input channel separately) followed by a pointwise convolution which mixes together the resulting output channels.
+
+Intuitively, separable convolutions can be understood as a way to factorize a convolution kernel into two smaller kernels, or as an extreme version of an Inception block.""" ;
+                 rdfs:label "Separable Convolutional 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#SeparableConv2D
+:SeparableConv2D rdf:type owl:Class ;
+                 rdfs:subClassOf :ConvolutionalLayer ;
+                 rdfs:comment """Depthwise separable 2D convolution.
+
+Separable convolutions consist in first performing a depthwise spatial convolution (which acts on each input channel separately) followed by a pointwise convolution which mixes together the resulting output channels.
+
+Intuitively, separable convolutions can be understood as a way to factorize a convolution kernel into two smaller kernels, or as an extreme version of an Inception block.""" ;
+                 rdfs:label "Separable Convolutional 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#SimpleRNN
+:SimpleRNN rdf:type owl:Class ;
+           rdfs:subClassOf :RecurrentLayer ;
+           rdfs:comment "Fully-connected RNN where the output is to be fed back to input." ;
+           rdfs:label "Simple RNN Layer" .
+
+
+###  https://w3id.org/nno/ontology#SimpleRNNCell
+:SimpleRNNCell rdf:type owl:Class ;
+               rdfs:subClassOf :RecurrentLayer ;
+               rdfs:comment "Cell class for SimpleRNN." ;
+               rdfs:label "Simple RNN Cell Layer" .
+
+
+###  https://w3id.org/nno/ontology#SpatialDropout1D
+:SpatialDropout1D rdf:type owl:Class ;
+                  rdfs:subClassOf :CoreLayer ;
+                  rdfs:comment """Spatial 1D version of Dropout.
+
+This version performs the same function as Dropout, however it drops entire 1D feature maps instead of individual elements. If adjacent frames within feature maps are strongly correlated (as is normally the case in early convolution layers) then regular dropout will not regularize the activations and will otherwise just result in an effective learning rate decrease. In this case, SpatialDropout1D will help promote independence between feature maps and should be used instead.""" ;
+                  rdfs:label "Spatial Dropout 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#SpatialDropout2D
+:SpatialDropout2D rdf:type owl:Class ;
+                  rdfs:subClassOf :CoreLayer ;
+                  rdfs:comment """Spatial 2D version of Dropout.
+
+This version performs the same function as Dropout, however it drops entire 2D feature maps instead of individual elements. If adjacent pixels within feature maps are strongly correlated (as is normally the case in early convolution layers) then regular dropout will not regularize the activations and will otherwise just result in an effective learning rate decrease. In this case, SpatialDropout2D will help promote independence between feature maps and should be used instead.""" ;
+                  rdfs:label "Spatial Dropout 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#SpatialDropout3D
+:SpatialDropout3D rdf:type owl:Class ;
+                  rdfs:subClassOf :CoreLayer ;
+                  rdfs:comment """Spatial 3D version of Dropout.
+
+This version performs the same function as Dropout, however it drops entire 3D feature maps instead of individual elements. If adjacent pixels within feature maps are strongly correlated (as is normally the case in early convolution layers) then regular dropout will not regularize the activations and will otherwise just result in an effective learning rate decrease. In this case, SpatialDropout3D will help promote independence between feature maps and should be used instead.""" ;
+                  rdfs:label "Spatial Dropout 3D Layer" .
+
+
+###  https://w3id.org/nno/ontology#UpSampling1D
+:UpSampling1D rdf:type owl:Class ;
+              rdfs:subClassOf :ConvolutionalLayer ;
+              rdfs:comment "Upsampling layer for 1D inputs." ;
+              rdfs:label "Upsampling 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#UpSampling2D
+:UpSampling2D rdf:type owl:Class ;
+              rdfs:subClassOf :ConvolutionalLayer ;
+              rdfs:comment """Upsampling layer for 2D inputs.
+
+Repeats the rows and columns of the data by size[0] and size[1] respectively.""" ;
+              rdfs:label "Upsampling 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#UpSampling3D
+:UpSampling3D rdf:type owl:Class ;
+              rdfs:subClassOf :ConvolutionalLayer ;
+              rdfs:comment """Upsampling layer for 3D inputs.
+
+Repeats the 1st, 2nd and 3rd dimensions of the data by size[0], size[1] and size[2] respectively.""" ;
+              rdfs:label "Upsampling 3D Layer" .
+
+
+###  https://w3id.org/nno/ontology#ZeroPadding1D
+:ZeroPadding1D rdf:type owl:Class ;
+               rdfs:subClassOf :ConvolutionalLayer ;
+               rdfs:comment "Zero-padding layer for 1D input (e.g. temporal sequence)." ;
+               rdfs:label "Zero-padding 1D Layer" .
+
+
+###  https://w3id.org/nno/ontology#ZeroPadding2D
+:ZeroPadding2D rdf:type owl:Class ;
+               rdfs:subClassOf :ConvolutionalLayer ;
+               rdfs:comment """Zero-padding layer for 2D input (e.g. picture).
+
+This layer can add rows and columns of zeros at the top, bottom, left and right side of an image tensor.""" ;
+               rdfs:label "Zero-padding 2D Layer" .
+
+
+###  https://w3id.org/nno/ontology#ZeroPadding3D
+:ZeroPadding3D rdf:type owl:Class ;
+               rdfs:subClassOf :ConvolutionalLayer ;
+               rdfs:comment "Zero-padding layer for 3D data (spatial or spatio-temporal)." ;
+               rdfs:label "Zero-padding 3D Layer" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.aifb.kit.edu/web/Anna_Nguyen
+<http://www.aifb.kit.edu/web/Anna_Nguyen> rdf:type owl:NamedIndividual ,
+                                                   foaf:Person ;
+                                          rdfs:label "Anna Nguyen" ;
+                                          rdfs:seeAlso "http://www.aifb.kit.edu/web/Anna_Nguyen" .
+
+
+###  http://www.aifb.kit.edu/web/Michael_Färber
+<http://www.aifb.kit.edu/web/Michael_Färber> rdf:type owl:NamedIndividual ,
+                                                      foaf:Person ;
+                                             rdfs:label "Michael Färber" ;
+                                             rdfs:seeAlso "http://www.aifb.kit.edu/web/Michael_Färber" .
+
+
+###  http://www.aifb.kit.edu/web/Tobias_Weller
+<http://www.aifb.kit.edu/web/Tobias_Weller> rdf:type owl:NamedIndividual ,
+                                                     foaf:Person ;
+                                            rdfs:label "Tobias Weller" ;
+                                            rdfs:seeAlso "http://www.aifb.kit.edu/web/Tobias_Weller" .
+
+
+###  http://www.aifb.kit.edu/web/Web_Science
+<http://www.aifb.kit.edu/web/Web_Science> rdf:type owl:NamedIndividual ,
+                                                   foaf:Organization ;
+                                          rdfs:label "Web Science (AIFB)" ;
+                                          rdfs:seeAlso "http://www.aifb.kit.edu/web/Web_Science" .
+
+
+###  http://www.aifb.kit.edu/web/York_Sure-Vetter
+<http://www.aifb.kit.edu/web/York_Sure-Vetter> rdf:type owl:NamedIndividual ,
+                                                        foaf:Person ;
+                                               rdfs:label "York Sure-Vetter" ;
+                                               rdfs:seeAlso "http://www.aifb.kit.edu/web/York_Sure-Vetter" .
+
+
+###  https://w3id.org/nno/ontology#adadelta
+:adadelta rdf:type owl:NamedIndividual ,
+                   :Optimizer ;
+          rdfs:comment "Adadelta is a more robust extension of Adagrad that adapts learning rates based on a moving window of gradient updates, instead of accumulating all past gradients. This way, Adadelta continues learning even when many updates have been done. Compared to Adagrad, in the original version of Adadelta you don't have to set an initial learning rate. In this version, initial learning rate and decay factor can be set, as in most other Keras optimizers." ;
+          rdfs:label "Adadelta Optimizer" .
+
+
+###  https://w3id.org/nno/ontology#adagrad
+:adagrad rdf:type owl:NamedIndividual ,
+                  :Optimizer ;
+         rdfs:comment "Adagrad is an optimizer with parameter-specific learning rates, which are adapted relative to how frequently a parameter gets updated during training. The more updates a parameter receives, the smaller the learning rate." ;
+         rdfs:label "Adagrad Optimizer" .
+
+
+###  https://w3id.org/nno/ontology#adam
+:adam rdf:type owl:NamedIndividual ,
+               :Optimizer ;
+      rdfs:label "Adam Optimizer" .
+
+
+###  https://w3id.org/nno/ontology#adamax
+:adamax rdf:type owl:NamedIndividual ,
+                 :Optimizer ;
+        rdfs:label "Adamax Optimizer" .
+
+
+###  https://w3id.org/nno/ontology#binarycrossentropy
+:binarycrossentropy rdf:type owl:NamedIndividual ,
+                             :ClassificationLoss ;
+                    rdfs:label "Binary Crossentropy" .
+
+
+###  https://w3id.org/nno/ontology#categoricalcrossentropy
+:categoricalcrossentropy rdf:type owl:NamedIndividual ,
+                                  :ClassificationLoss ;
+                         rdfs:label "Categorical Crossentropy" .
+
+
+###  https://w3id.org/nno/ontology#categoricalhinge
+:categoricalhinge rdf:type owl:NamedIndividual ,
+                           :ClassificationLoss ;
+                  rdfs:label "Categorical Hinge" .
+
+
+###  https://w3id.org/nno/ontology#cosineproximity
+:cosineproximity rdf:type owl:NamedIndividual ,
+                          :RegressiveLoss ;
+                 rdfs:label "Cosine Proximity" .
+
+
+###  https://w3id.org/nno/ontology#customloss
+:customloss rdf:type owl:NamedIndividual ,
+                     :LossFunction ;
+            rdfs:comment "Custom loss function defined by user" .
+
+
+###  https://w3id.org/nno/ontology#customoptimizer
+:customoptimizer rdf:type owl:NamedIndividual ,
+                          :Optimizer ;
+                 rdfs:comment "Custom optimizer defined by user" ;
+                 rdfs:label "Custom Optimizer" .
+
+
+###  https://w3id.org/nno/ontology#hinge
+:hinge rdf:type owl:NamedIndividual ,
+                :ClassificationLoss ;
+       rdfs:label "Hinge" .
+
+
+###  https://w3id.org/nno/ontology#kullbackleiblerdivergence
+:kullbackleiblerdivergence rdf:type owl:NamedIndividual ,
+                                    :ClassificationLoss ;
+                           rdfs:label "Kullback Leibler Divergence" .
+
+
+###  https://w3id.org/nno/ontology#logcosh
+:logcosh rdf:type owl:NamedIndividual ,
+                  :RegressiveLoss ;
+         rdfs:label "Log Cosh Loss" .
+
+
+###  https://w3id.org/nno/ontology#meanabsoluteerror
+:meanabsoluteerror rdf:type owl:NamedIndividual ,
+                            :RegressiveLoss ;
+                   rdfs:label "Mean Absolute Error" .
+
+
+###  https://w3id.org/nno/ontology#meanabsolutepercentageerror
+:meanabsolutepercentageerror rdf:type owl:NamedIndividual ,
+                                      :RegressiveLoss ;
+                             rdfs:label "Mean Absolute Percentage Error" .
+
+
+###  https://w3id.org/nno/ontology#meansquarederror
+:meansquarederror rdf:type owl:NamedIndividual ,
+                           :RegressiveLoss ;
+                  rdfs:label "Mean Squared Error" .
+
+
+###  https://w3id.org/nno/ontology#meansquaredlogarithmicerror
+:meansquaredlogarithmicerror rdf:type owl:NamedIndividual ,
+                                      :RegressiveLoss ;
+                             rdfs:label "Mean Squared Logarithmic Error" .
+
+
+###  https://w3id.org/nno/ontology#nadam
+:nadam rdf:type owl:NamedIndividual ,
+                :Optimizer ;
+       rdfs:comment "Much like Adam is essentially RMSprop with momentum, Nadam is Adam RMSprop with Nesterov momentum." ;
+       rdfs:label "Nesterov Adam Optimizer" .
+
+
+###  https://w3id.org/nno/ontology#huberloss
+:huberloss rdf:type owl:NamedIndividual ,
+                            :RegressiveLoss ;
+                   rdfs:label "Huber Loss" .
+
+
+###  https://w3id.org/nno/ontology#poisson
+:poisson rdf:type owl:NamedIndividual ,
+                  :RegressiveLoss ;
+         rdfs:label "Poisson" .
+
+
+###  https://w3id.org/nno/ontology#rmsprop
+:rmsprop rdf:type owl:NamedIndividual ,
+                  :Optimizer ;
+         rdfs:comment "This optimizer is usually a good choice for recurrent neural networks." ;
+         rdfs:label "RMSProp Optimizer" .
+
+
+###  https://w3id.org/nno/ontology#sgd
+:sgd rdf:type owl:NamedIndividual ,
+              :Optimizer ;
+     rdfs:comment "Includes support for momentum, learning rate decay, and Nesterov momentum." ;
+     rdfs:label "Stochastic Gradient Descent Optimizer" .
+
+
+###  https://w3id.org/nno/ontology#sparsecategoricalcrossentropy
+:sparsecategoricalcrossentropy rdf:type owl:NamedIndividual ,
+                                        :ClassificationLoss ;
+                               rdfs:label "Sparse Categorical Crossentropy" .
+
+
+###  https://w3id.org/nno/ontology#squaredhinge
+:squaredhinge rdf:type owl:NamedIndividual ,
+                       :ClassificationLoss ;
+              rdfs:label "Squared Hinge" .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
