@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="duplicate:http://kt.ijs.si/panovp/OntoDM-KDD.owl" uri="ontodm/OntoDM-KDD.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="duplicate:http://kt.ijs.si/panovp/OntoDM-KDD.owl" uri="ontodm/OntoDM-KDD_fixed_for_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="http://kt.ijs.si/panovp/OntoDM/OntoDM-uncurated.owl" uri="ontodm/OntoDM-uncurated.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="http://kt.ijs.si/panovp/OntoDM/OntoDMUseCase1.owl" uri="ontodm/OntoDMUseCase1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="http://kt.ijs.si/panovp/OntoDM/external.owl" uri="ontodm/external.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="http://kt.ijs.si/panovp/OntoDM/external_OBI.owl" uri="ontodm/external_OBI.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="http://kt.ijs.si/panovp/OntoDT" uri="ontodm/OntoDT.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/" uri="anno11.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="http://w3id.org/annett-o/" uri="annett-o-0.1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="http://www.edowson.com/ontologies/2019/2/ai" uri="ed-ai.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="duplicate:http://www.ontodm.com/OntoDM-core/" uri="ontodm/OntoDM_fixed_for_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1657723747158" name="duplicate:http://www.ontodm.com/OntoDM-core/" uri="ontodm/OntoDM.owl"/>
+    </group>
+</catalog>

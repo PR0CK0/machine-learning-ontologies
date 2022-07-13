@@ -1,0 +1,1255 @@
+@prefix : <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/> .
+@prefix anno: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/2.3/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix anno: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix fibo-fnd-utl-av: <http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-fnd-utl-bt: <http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/> .
+@prefix fibo-fnd-rel-rel: <http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-alx: <http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/Analytics/> .
+@base <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/> .
+
+<http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/> rdf:type owl:Ontology ;
+                                                                      owl:versionIRI <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/0.5> ;
+                                                                      owl:imports <http://www.nanopub.org/nschema> ,
+                                                                                  fibo-fnd-rel-rel: ,
+                                                                                  fibo-fnd-utl-alx: ,
+                                                                                  fibo-fnd-utl-av: ,
+                                                                                  fibo-fnd-utl-bt: ;
+                                                                      dct:abstract """When creating an Artificial Neural Network for machine learning tasks, present research offers some theoretical information about how ANNs should be constructed, but this theory is often not sufficient for creating state-of-the-art models. In these cases, researchers looking to create ANNs rely on some best practices which have emerged in recent years. Such practices typically stem from some research group having success with a particular approach to a particular application of ANNs. In these cases, the reasons for success usually have some intuition behind them, but lack formal proofs of optimality.
+
+One such area in which researchers rely on “best practices” is with network weight initialization. There are a number of options for initialization, with almost all options being appropriate for some situations and not for others. The choice of initialization function usually depends on network structure, the network's task, the input data, etc. Having a system which could help researchers recall best practices, and perhaps recommend others which are not known to the researcher, is a requirement for those who use ANNs in their research but are not experts.""" ;
+                                                                      dct:creator "MD Ridwan Al Iqbal" ,
+                                                                                  "Matt Klawonn" ,
+                                                                                  "Spencer Norris" ;
+                                                                      dct:modified "April 22nd, 2016"^^xsd:string ;
+                                                                      sm:dependsOn "http://purl.org/dc/terms/"^^xsd:anyURI ,
+                                                                                   "http://www.omg.org/spec/EDMC-FIBO/FND/"^^<xsd;anyURI> ,
+                                                                                   "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ,
+                                                                                   "http://www.w3.org/TR/prov-o/"^^xsd:anyURI ;
+                                                                      sm:fileAbbreviation "anno"^^xsd:string ;
+                                                                      sm:filename "OE_11_Team_Cerebral.rdf"^^xsd:string ;
+                                                                      rdfs:label "Team Cerebral Ontology" ;
+                                                                      owl:priorVersion "https://drive.google.com/file/d/0ByU5I4EWAyp5YWgzd2V5UjA3alk/view?usp=sharing"^^xsd:string ;
+                                                                      skos:changeNote "In this version, unnecessary Nanopub assertions were removed, some minor updates were made with regards to labels, and domains and ranges were added to some properties." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/pav/2.3/authoredBy
+pav:authoredBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.nanopub.org/nschema#hasAssertion
+np:hasAssertion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.nanopub.org/nschema#hasProvenance
+np:hasProvenance rdf:type owl:AnnotationProperty .
+
+
+###  http://www.nanopub.org/nschema#hasPublicationInfo
+np:hasPublicationInfo rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#generatedAtTime
+prov:generatedAtTime rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+prov:wasAttributedTo rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homePage
+foaf:homePage rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/hasActivationFunction
+anno:hasActivationFunction rdf:type owl:ObjectProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:domain anno:Unit ;
+                           rdfs:range anno:ActivationFunction ;
+                           fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology" ;
+                           rdfs:label "has activation function" ;
+                           skos:definition "indicates that a certain unit has a particular function as its activation function" .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/hasMinimumCompatibleDepth
+anno:hasMinimumCompatibleDepth rdf:type owl:ObjectProperty ;
+                               rdfs:domain anno:WeightInitializationAlgorithm .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/isActivationFunctionOf
+anno:isActivationFunctionOf rdf:type owl:ObjectProperty ,
+                                     owl:InverseFunctionalProperty ;
+                            rdfs:domain anno:ActivationFunction ;
+                            rdfs:range anno:Unit ;
+                            fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology" ;
+                            rdfs:label "is activation function of" ;
+                            skos:definition "indicates that a function serves as the activation function of a unit" .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/isCompatibleWithActivationFunction
+anno:isCompatibleWithActivationFunction rdf:type owl:ObjectProperty ;
+                                        rdfs:domain anno:WeightInitializationAlgorithm ;
+                                        rdfs:range anno:ActivationFunction ;
+                                        fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology" ;
+                                        rdfs:label "is compatible with activation function" ;
+                                        skos:definition "Indicates that a weight initialization algorithm is compatible with a particular activation function." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/isCompatibleWithLayerType
+anno:isCompatibleWithLayerType rdf:type owl:ObjectProperty ;
+                               rdfs:domain anno:WeightInitializationAlgorithm ;
+                               rdfs:range anno:Layer ;
+                               fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology" ;
+                               rdfs:label "is compatible with layer type" ;
+                               skos:definition "Indicates that a weight initialization algorithm is compatible with a particular layer type." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/hasDepth
+anno:hasDepth rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain anno:ArtificialNeuralNetwork ;
+              rdfs:range xsd:nonNegativeInteger ;
+              fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology" ;
+              rdfs:label "has depth" ;
+              skos:definition "indicates that an artificial neural network has a certain depth" .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/hasMaximumCompatibleDepth
+anno:hasMaximumCompatibleDepth rdf:type owl:DatatypeProperty ;
+                               rdfs:domain anno:WeightInitializationAlgorithm ;
+                               rdfs:range fibo-fnd-utl-bt:nonNegativeWholeNumber ;
+                               fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology"^^xsd:string ;
+                               rdfs:label "has maximum compatible depth"^^xsd:string ;
+                               skos:definition "Indicates the maximum artificial neural network depth with which a weight initialization algorithm can be used."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/hasMinimumCompatibleDepth
+anno:hasMinimumCompatibleDepth rdf:type owl:DatatypeProperty ;
+                               rdfs:range fibo-fnd-utl-bt:nonNegativeWholeNumber .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/hasMinimumDepth
+anno:hasMinimumDepth rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf anno:hasDepth ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain anno:ArtificialNeuralNetwork ;
+                     rdfs:range fibo-fnd-utl-bt:nonNegativeWholeNumber ;
+                     rdfs:label "has minimum depth" ;
+                     skos:definition "Specifies the minimum depth an Artificial Neural Network can have" ;
+                     skos:example "Deep neural networks have a minimum depth of 2." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/isLinear
+anno:isLinear rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain anno:Function ;
+              rdfs:range xsd:boolean ;
+              fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology" ;
+              rdfs:label "is linear" ;
+              skos:definition "indicates that a given function is linear in its inputs" .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/isSmooth
+anno:isSmooth rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain anno:Function ;
+              rdfs:range xsd:boolean ;
+              fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology" ;
+              rdfs:label "is smooth" ;
+              skos:definition "indicates that a certain function is smooth in its inputs" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/Agent
+dct:Agent rdf:type owl:Class .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/ActivationFunction
+anno:ActivationFunction rdf:type owl:Class ;
+                        rdfs:subClassOf anno:Function ;
+                        owl:disjointWith anno:ProbabilityDensityFunction ,
+                                         anno:Unit ;
+                        fibo-fnd-utl-av:definitionOrigin "https://en.wikipedia.org/wiki/Activation_function"^^xsd:string ;
+                        rdfs:label "activation function"^^xsd:string ;
+                        skos:definition "a function associated with a unit in an artificial neural network"^^xsd:string ;
+                        skos:example "Various activation functions are usable with the Xavier weight Initialization algorithm." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/Algorithm
+anno:Algorithm rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               fibo-fnd-utl-av:definitionOrigin "http://www.dictionary.com/browse/algorithm?s=t"^^xsd:string ;
+               rdfs:label "algorithm"^^xsd:string ;
+               skos:definition "a set of rules for solving a problem in a finite number of steps, as for finding the greatest common divisor"^^xsd:string ;
+               skos:example "Neural network weights are chosen by an algorithm."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/ArtificialNeuralNetwork
+anno:ArtificialNeuralNetwork rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( anno:ComputationalModel
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty fibo-fnd-rel-rel:hasPart ;
+                                                                          owl:someValuesFrom anno:Layer
+                                                                        ]
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty anno:hasDepth ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:onDatatype xsd:integer ;
+                                                                                               owl:withRestrictions ( [ xsd:minInclusive 1
+                                                                                                                      ]
+                                                                                                                    )
+                                                                                             ]
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf anno:ComputationalModel ;
+                             fibo-fnd-utl-av:definitionOrigin "https://www.techopedia.com/definition/5967/artificial-neural-network-ann"^^xsd:string ;
+                             rdfs:label "artificial neural network"^^xsd:string ;
+                             skos:definition "a computational model based on the structure and functions of biological neural networks. Information that flows through the network affects the structure of the ANN because a neural network changes - or learns, in a sense - based on that input and output"^^xsd:string ;
+                             skos:example "Depth is a property of Artificial Neural Networks."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/ComputationalModel
+anno:ComputationalModel rdf:type owl:Class ;
+                        rdfs:subClassOf anno:Model ;
+                        fibo-fnd-utl-av:definitionOrigin "https://en.wikipedia.org/wiki/Computational_model"^^xsd:string ;
+                        rdfs:label "computational model"^^xsd:string ;
+                        skos:definition "a computational model is a mathematical model in computational science that requires extensive computational resources to study the behavior of a complex system by computer simulation"^^xsd:string ;
+                        skos:example "Many scientific fields use computational models to achieve results which are beyond traditional experimental methods."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/DeepArtificialNeuralNetwork
+anno:DeepArtificialNeuralNetwork rdf:type owl:Class ;
+                                 rdfs:subClassOf anno:ArtificialNeuralNetwork ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty anno:hasDepth ;
+                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                        owl:onDatatype xsd:integer ;
+                                                                        owl:withRestrictions ( [ xsd:minInclusive 2
+                                                                                               ]
+                                                                                             )
+                                                                      ]
+                                                 ] ;
+                                 fibo-fnd-utl-av:definitionOrigin "Deep Neural Networks for Acoustic Modeling in Speech Recognition"^^xsd:string ;
+                                 rdfs:label "deep artificial neural network"^^xsd:string ;
+                                 skos:definition "an artificial neural network that has more than one layer of hidden units between its inputs and its outputs"^^xsd:string ;
+                                 skos:example "The artificial neural network used had more than one hidden layer, making it a deep artificial neural network."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/ExtremelyDeepArtificialNeuralNetwork
+anno:ExtremelyDeepArtificialNeuralNetwork rdf:type owl:Class ;
+                                          rdfs:subClassOf anno:DeepArtificialNeuralNetwork ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty anno:hasDepth ;
+                                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                 owl:onDatatype xsd:integer ;
+                                                                                 owl:withRestrictions ( [ xsd:minInclusive 10
+                                                                                                        ]
+                                                                                                      )
+                                                                               ]
+                                                          ] ;
+                                          fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology"^^xsd:string ;
+                                          rdfs:label "extremely deep artificial neural network"^^xsd:string ;
+                                          skos:definition "an artificial neural network that has ten or more layers of hidden units between its inputs and its outputs"^^xsd:string ;
+                                          skos:example "Cutting edge artificial neural networks are often extremely deep artificial neural networks."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/FeedforwardArtificialNeuralNetwork
+anno:FeedforwardArtificialNeuralNetwork rdf:type owl:Class ;
+                                        rdfs:subClassOf anno:ArtificialNeuralNetwork ;
+                                        fibo-fnd-utl-av:definitionOrigin "https://en.wikipedia.org/wiki/Feedforward_neural_network"^^xsd:string ;
+                                        rdfs:label "feedforward artificial neural network"^^xsd:string ;
+                                        skos:definition "a neural network with outputs only going to next layer, no output is connected as input into a previous layer"^^xsd:string ;
+                                        skos:example "Depth is a property of Feedforward Artificial Neural Networks."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/FullyConnectedHiddenLayer
+anno:FullyConnectedHiddenLayer rdf:type owl:Class ;
+                               rdfs:subClassOf anno:HiddenLayer ;
+                               fibo-fnd-utl-av:definitionOrigin "http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html" ;
+                               rdfs:label "fully connected hidden layer" ;
+                               skos:definition "a hidden layer where all the input output connections have been connected" ;
+                               skos:example "A neural network may have 3 hidden layers that are all fully connected." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/Function
+anno:Function rdf:type owl:Class ;
+              rdfs:subClassOf owl:Thing ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty anno:isLinear ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:boolean
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty anno:isSmooth ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:boolean
+                              ] ;
+              fibo-fnd-utl-av:definitionOrigin "http://mathworld.wolfram.com/Function.html"^^xsd:string ;
+              rdfs:label "function"^^xsd:string ;
+              skos:definition "a relation that uniquely associates members of one set with members of another set"^^xsd:string ;
+              skos:example "A function is typically performed on members of the set of real numbers." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/GaussianDensityFunction
+anno:GaussianDensityFunction rdf:type owl:Class ;
+                             rdfs:subClassOf anno:ProbabilityDensityFunction ;
+                             owl:disjointWith anno:UniformDensityFunction ;
+                             fibo-fnd-utl-av:definitionOrigin "https://en.wikipedia.org/wiki/Normal_distribution"^^xsd:string ;
+                             rdfs:label "Gaussian probability function"^^xsd:string ;
+                             skos:definition "a continuous symmetric probability density function defined by a mean and a standard deviation"^^xsd:string ;
+                             skos:example "The gaussian density function is symmetric about its mean." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/GaussianInitializationAlgorithm
+anno:GaussianInitializationAlgorithm rdf:type owl:Class ;
+                                     rdfs:subClassOf anno:WeightInitializationAlgorithm ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:isCompatibleWithActivationFunction ;
+                                                       owl:someValuesFrom anno:ActivationFunction
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:isCompatibleWithLayerType ;
+                                                       owl:someValuesFrom anno:HiddenLayer
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:hasMaximumCompatibleDepth ;
+                                                       owl:hasValue 2
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:hasMinimumCompatibleDepth ;
+                                                       owl:hasValue 0
+                                                     ] ;
+                                     owl:disjointWith anno:HeInitializationAlgorithm ,
+                                                      anno:LecunUniformInitializationAlgorithm ,
+                                                      anno:OrthogonalInitializationAlgorithm ,
+                                                      anno:UniformInitializationAlgorithm ,
+                                                      anno:XavierInitializationAlgorithm ,
+                                                      anno:ZeroInitializationAlgorithm ;
+                                     fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology" ;
+                                     sm:dependsOn anno:GaussianDensityFunction ;
+                                     rdfs:label "Gaussian initialization algorithm" ;
+                                     skos:definition "a weight initialization algorithm that picks from a Gaussian distribution." ;
+                                     skos:example "The recommendation system picked a Gaussian Initialization Algorithm to initialize the network because it was shallow." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/GradientDescentAlgorithm
+anno:GradientDescentAlgorithm rdf:type owl:Class ;
+                              rdfs:subClassOf anno:TrainingAlgorithm ;
+                              fibo-fnd-utl-av:definitionOrigin "https://en.wikipedia.org/wiki/Gradient_descent"^^xsd:string ;
+                              rdfs:label "gradient descent algorithm"^^xsd:string ;
+                              skos:definition "an algorithm which provides a way to find a local minimum of a function"^^xsd:string ;
+                              skos:example "Gradient descent is used for training a neural network"^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/HeInitializationAlgorithm
+anno:HeInitializationAlgorithm rdf:type owl:Class ;
+                               rdfs:subClassOf anno:WeightInitializationAlgorithm ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty anno:isCompatibleWithActivationFunction ;
+                                                 owl:someValuesFrom anno:ActivationFunction
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty anno:isCompatibleWithLayerType ;
+                                                 owl:someValuesFrom anno:HiddenLayer
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty anno:hasMaximumCompatibleDepth ;
+                                                 owl:hasValue 100
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty anno:hasMinimumCompatibleDepth ;
+                                                 owl:hasValue 0
+                                               ] ;
+                               owl:disjointWith anno:LecunUniformInitializationAlgorithm ,
+                                                anno:OrthogonalInitializationAlgorithm ,
+                                                anno:UniformInitializationAlgorithm ,
+                                                anno:XavierInitializationAlgorithm ,
+                                                anno:ZeroInitializationAlgorithm ;
+                               fibo-fnd-utl-av:definitionOrigin anno:citation1 ;
+                               rdfs:label "He initialization algorithm" ;
+                               skos:definition "a weight initialization function which picks from a probability distribution in a normalized range. This normalized range differs from Xavier initialization in that it considers rectifier nonlinearities" ;
+                               skos:example "The He initialization algorithm is appropriate for deep artificial neural networks with nonlinear activation functions." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/HiddenLayer
+anno:HiddenLayer rdf:type owl:Class ;
+                 rdfs:subClassOf anno:Layer ;
+                 fibo-fnd-utl-av:definitionOrigin "http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html"^^xsd:string ;
+                 rdfs:label "hidden layer"^^xsd:string ;
+                 skos:definition "a layer responsible for intermediary calculations in a neural network"^^xsd:string ;
+                 skos:example "Compose neural networks along with individual hidden units."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/HiddenUnit
+anno:HiddenUnit rdf:type owl:Class ;
+                rdfs:subClassOf anno:Unit ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty fibo-fnd-rel-rel:isMemberOf ;
+                                  owl:someValuesFrom anno:HiddenLayer
+                                ] ;
+                fibo-fnd-utl-av:definitionOrigin "\"What's Hidden in the Hidden Layers?\", Touretzky and Pomerleau"^^xsd:string ;
+                rdfs:label "hidden unit"^^xsd:string ;
+                skos:definition "an intermediary unit in an artificial neural network"^^xsd:string ;
+                skos:example "Hidden units do much of the computation in artificial neural networks." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/HyperbolicTangentActivationFunction
+anno:HyperbolicTangentActivationFunction rdf:type owl:Class ;
+                                         rdfs:subClassOf anno:NonlinearActivationFunction ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty anno:isSmooth ;
+                                                           owl:hasValue "true"^^xsd:boolean
+                                                         ] ;
+                                         fibo-fnd-utl-av:definitionOrigin "https://en.wikipedia.org/wiki/Hyperbolic_function" ;
+                                         rdfs:label "hyperbolic tangent activation function" ;
+                                         skos:definition "a normalized sigmoidal activation function typically ranging in either (-1, 1) or (0, 1)" ;
+                                         skos:example "The hyperbolic tangent activation function is symmetric about 0." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/Hyperparameter
+anno:Hyperparameter rdf:type owl:Class ;
+                    rdfs:subClassOf fibo-fnd-utl-alx:Variable ;
+                    fibo-fnd-utl-av:definitionOrigin "Colin Raffel"^^xsd:string ;
+                    rdfs:label "hyperparameter" ;
+                    skos:definition "a variable set before actually optimizing the model's parameters"^^xsd:string ;
+                    skos:example "Weight initialization function choice is an example of a hyperparameter." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/IdentityInitializationAlgorithm
+anno:IdentityInitializationAlgorithm rdf:type owl:Class ;
+                                     rdfs:subClassOf anno:WeightInitializationAlgorithm ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:isCompatibleWithActivationFunction ;
+                                                       owl:someValuesFrom anno:ActivationFunction
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:isCompatibleWithLayerType ;
+                                                       owl:someValuesFrom anno:SquareLayer
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:isCompatibleWithLayerType ;
+                                                       owl:someValuesFrom anno:TwoDimensionalLayer
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:hasMaximumCompatibleDepth ;
+                                                       owl:hasValue 2
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:hasMinimumCompatibleDepth ;
+                                                       owl:hasValue 0
+                                                     ] ;
+                                     fibo-fnd-utl-av:definitionOrigin "http://keras.io/initializations/" ;
+                                     sm:dependsOn anno:SquareLayer ,
+                                                  anno:TwoDimensionalLayer ;
+                                     rdfs:label "identity initialization algorithm" ;
+                                     skos:definition "a weight initialization algorithm appropriate for square two dimensional layers, which makes the N x N weight matrix the N x N identity matrix" ;
+                                     skos:example "The identity initialization algorithm is appropriate for square 2D layers." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/InitializationAlgorithm
+anno:InitializationAlgorithm rdf:type owl:Class ;
+                             rdfs:subClassOf anno:Algorithm ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty fibo-fnd-rel-rel:isPartOf ;
+                                               owl:someValuesFrom anno:ArtificialNeuralNetwork
+                                             ] ;
+                             fibo-fnd-utl-av:definitionOrigin "http://www.dictionary.com/browse/initialise"^^xsd:string ;
+                             rdfs:label "initialization algorithm"^^xsd:string ;
+                             skos:definition "an algorithm which sets (variables, counters, switches, etc.) to their starting values at the beginning of a program or subprogram"^^xsd:string ;
+                             skos:example "Neural network weights must be decided with an initialization function."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/Layer
+anno:Layer rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( skos:Collection
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty fibo-fnd-rel-rel:hasPart ;
+                                                        owl:someValuesFrom anno:Unit
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty fibo-fnd-rel-rel:isPartOf ;
+                                                        owl:someValuesFrom anno:ArtificialNeuralNetwork
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf skos:Collection ;
+           fibo-fnd-utl-av:definitionOrigin "http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html"^^xsd:string ;
+           rdfs:label "layer"^^xsd:string ;
+           skos:definition "a collection of a number of interconnected units which contain an activation function"^^xsd:string ;
+           skos:example "Artificial Neural Networks are comprised of one or more layers."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/LeakyRectifiedLinearActivationFunction
+anno:LeakyRectifiedLinearActivationFunction rdf:type owl:Class ;
+                                            rdfs:subClassOf anno:RectifiedLinearActivationFunction ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty anno:isSmooth ;
+                                                              owl:hasValue "false"^^xsd:boolean
+                                                            ] ;
+                                            fibo-fnd-utl-av:definitionOrigin anno:citation7 ;
+                                            rdfs:label "leaky rectified linear activation function" ;
+                                            skos:definition "an activation function that has has a non-zero gradient over its entire domain" ;
+                                            skos:example "The leaky rectified linear activation function is a variation of the rectified linear activation function." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/LecunUniformInitializationAlgorithm
+anno:LecunUniformInitializationAlgorithm rdf:type owl:Class ;
+                                         rdfs:subClassOf anno:WeightInitializationAlgorithm ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty anno:isCompatibleWithActivationFunction ;
+                                                           owl:someValuesFrom anno:ActivationFunction
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty anno:isCompatibleWithLayerType ;
+                                                           owl:someValuesFrom anno:HiddenLayer
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty anno:hasMaximumCompatibleDepth ;
+                                                           owl:hasValue 5
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty anno:hasMinimumCompatibleDepth ;
+                                                           owl:hasValue 0
+                                                         ] ;
+                                         owl:disjointWith anno:OrthogonalInitializationAlgorithm ,
+                                                          anno:UniformInitializationAlgorithm ,
+                                                          anno:XavierInitializationAlgorithm ,
+                                                          anno:ZeroInitializationAlgorithm ;
+                                         fibo-fnd-utl-av:definitionOrigin anno:citation3 ;
+                                         sm:dependsOn anno:UniformDensityFunction ;
+                                         rdfs:label "Lecun initialization algorithm" ;
+                                         skos:definition "a weight initialization algorithm which picks from a uniform distribution and is scaled by the square root of the number of inputs" ;
+                                         skos:example "The Lecun uniform initialization algorithm was first proposed in 1998." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/LinearActivationFunction
+anno:LinearActivationFunction rdf:type owl:Class ;
+                              rdfs:subClassOf anno:ActivationFunction ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty anno:isLinear ;
+                                                owl:hasValue "true"^^xsd:boolean
+                                              ] ;
+                              owl:disjointWith anno:NonlinearActivationFunction ;
+                              fibo-fnd-utl-av:definitionOrigin "https://en.wikipedia.org/wiki/Activation_function"^^xsd:string ;
+                              rdfs:label "linear activation function"^^xsd:string ;
+                              skos:definition "an activation function that is not exponential in any of its inputs"^^xsd:string ;
+                              skos:example "The activation function was linear in its inputs, making it a linear activation function." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/LogisticSigmoidActivationFunction
+anno:LogisticSigmoidActivationFunction rdf:type owl:Class ;
+                                       rdfs:subClassOf anno:NonlinearActivationFunction ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty anno:isSmooth ;
+                                                         owl:hasValue "true"^^xsd:boolean
+                                                       ] ;
+                                       fibo-fnd-utl-av:definitionOrigin "https://en.wikipedia.org/wiki/Sigmoid_function" ;
+                                       rdfs:label "logistic sigmoid activation function" ;
+                                       skos:definition "a nonlinear activation function exhibiting a sigmoidal curve" ;
+                                       skos:example "The logistic sigmoid activation function is good for measuring probability." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/Model
+anno:Model rdf:type owl:Class ;
+           rdfs:subClassOf owl:Thing ;
+           fibo-fnd-utl-av:definitionOrigin "http://www.dictionary.com/browse/model?s=t"^^xsd:string ;
+           rdfs:label "model"^^xsd:string ;
+           skos:definition "a simplified representation of a system or phenomenon, as in the sciences or economics, with any hypotheses required to describe the system or explain the phenomenon, often mathematically"^^xsd:string ;
+           skos:example "Computational models are just one kind of model."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/NonlinearActivationFunction
+anno:NonlinearActivationFunction rdf:type owl:Class ;
+                                 rdfs:subClassOf anno:ActivationFunction ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty anno:isLinear ;
+                                                   owl:hasValue "false"^^xsd:boolean
+                                                 ] ;
+                                 fibo-fnd-utl-av:definitionOrigin "https://en.wikipedia.org/wiki/Activation_function"^^xsd:string ;
+                                 rdfs:label "nonlinear activation function"^^xsd:string ;
+                                 skos:definition "an activation function that is exponential in at least one input"^^xsd:string ;
+                                 skos:example "The activation function was not linear in its inputs, making it a non linear activation function." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/OE_bibliographic_citation
+anno:OE_bibliographic_citation rdf:type owl:Class ;
+                               rdfs:subClassOf sm:BibliographicCitation ;
+                               rdfs:label "OE bibliographic citation." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/OrthogonalInitializationAlgorithm
+anno:OrthogonalInitializationAlgorithm rdf:type owl:Class ;
+                                       rdfs:subClassOf anno:WeightInitializationAlgorithm ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty anno:isCompatibleWithActivationFunction ;
+                                                         owl:someValuesFrom anno:ActivationFunction
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty anno:isCompatibleWithLayerType ;
+                                                         owl:someValuesFrom anno:SquareLayer
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty anno:isCompatibleWithLayerType ;
+                                                         owl:someValuesFrom anno:TwoDimensionalLayer
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty anno:hasMaximumCompatibleDepth ;
+                                                         owl:hasValue 2
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty anno:hasMinimumCompatibleDepth ;
+                                                         owl:hasValue 0
+                                                       ] ;
+                                       owl:disjointWith anno:UniformInitializationAlgorithm ,
+                                                        anno:XavierInitializationAlgorithm ,
+                                                        anno:ZeroInitializationAlgorithm ;
+                                       fibo-fnd-utl-av:definitionOrigin "http://keras.io/initializations/" ;
+                                       sm:dependsOn anno:SquareLayer ,
+                                                    anno:TwoDimensionalLayer ;
+                                       rdfs:label "orthogonal initialization algorithm" ;
+                                       skos:definition "a weight initialization algorithm appropriate for square two dimensional layers, which makes the N x N weight matrix an N x N orthogonal matrix" ;
+                                       skos:example "The orthogonal initialization algorithm is appropriate for square 2D layers." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/ParametricRectifiedLinearActivationFunction
+anno:ParametricRectifiedLinearActivationFunction rdf:type owl:Class ;
+                                                 rdfs:subClassOf anno:RectifiedLinearActivationFunction ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty anno:isSmooth ;
+                                                                   owl:hasValue "false"^^xsd:boolean
+                                                                 ] ;
+                                                 fibo-fnd-utl-av:definitionOrigin anno:citation7 ;
+                                                 rdfs:label "parametric rectified linear activation function" ;
+                                                 skos:definition "a rectified activation function which adaptively learns the parameters of the rectifiers, and improves accuracy at negligible extra computational cost" ;
+                                                 skos:example "The parametric rectified linear activation function is a variation of the rectified linear activation function." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/ProbabilityDensityFunction
+anno:ProbabilityDensityFunction rdf:type owl:Class ;
+                                rdfs:subClassOf anno:Function ;
+                                owl:disjointWith anno:Unit ;
+                                fibo-fnd-utl-av:definitionOrigin "http://www.dictionary.com/browse/probability-density-function"^^xsd:string ;
+                                rdfs:label "probability distribution function"^^xsd:string ;
+                                skos:definition "a function of a continuous variable whose integral over a region gives the probability that a random variable falls within the region"^^xsd:string ;
+                                skos:example "Weight initialization algorithms select small random values from probability density functions." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/RectifiedLinearActivationFunction
+anno:RectifiedLinearActivationFunction rdf:type owl:Class ;
+                                       rdfs:subClassOf anno:LinearActivationFunction ;
+                                       fibo-fnd-utl-av:definitionOrigin anno:citation1 ;
+                                       rdfs:label "rectified linear activation function"^^xsd:string ;
+                                       skos:definition "a linear activation function which outputs max(0, x), where x is the input value"^^xsd:string ;
+                                       skos:example "The rectified linear activation function was the most popular activation function for deep neural networks in 2015." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/SoftmaxLogisticRegressionActivationFunction
+anno:SoftmaxLogisticRegressionActivationFunction rdf:type owl:Class ;
+                                                 rdfs:subClassOf anno:NonlinearActivationFunction ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty anno:isSmooth ;
+                                                                   owl:hasValue "true"^^xsd:boolean
+                                                                 ] ;
+                                                 fibo-fnd-utl-av:definitionOrigin "ftp://ftp.sas.com/pub/neural/FAQ2.html" ;
+                                                 rdfs:label "softmax logistic regression activation function" ;
+                                                 skos:definition "a generalization of logistic regression to the case of multiple classes" ;
+                                                 skos:example "The softmax logistic regression activation function is symmetric about 0." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/SoftsignActivationFunction
+anno:SoftsignActivationFunction rdf:type owl:Class ;
+                                rdfs:subClassOf anno:NonlinearActivationFunction ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty anno:isSmooth ;
+                                                  owl:hasValue "true"^^xsd:boolean
+                                                ] ;
+                                fibo-fnd-utl-av:definitionOrigin "http://cs224d.stanford.edu/lecture_notes/LectureNotes3.pdf" ;
+                                rdfs:label "softsign activation function" ;
+                                skos:definition "a nonlinear activation function exhibiting softer asymptotic behavior than alternative sigmoidal functions" ;
+                                skos:example "The softsign activation function is symmetric about 0." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/SquareLayer
+anno:SquareLayer rdf:type owl:Class ;
+                 rdfs:subClassOf anno:Layer ;
+                 fibo-fnd-utl-av:definitionOrigin "http://keras.io/layers/convolutional/" ;
+                 rdfs:label "square layer"^^xsd:string ;
+                 skos:definition "a layer in a neural network whose inputs' dimensions are all equal"^^xsd:string ;
+                 skos:example "Many convolutional layers are square layers."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/TrainingAlgorithm
+anno:TrainingAlgorithm rdf:type owl:Class ;
+                       rdfs:subClassOf anno:Algorithm ;
+                       fibo-fnd-utl-av:definitionOrigin "Y. S. Abu-Mostafa, M. Magdon-Ismail, and H.-T. Lin, Learning from data: a short course. United States: AMLBook.com, 2012."^^xsd:string ;
+                       rdfs:label "training algorithm"^^xsd:string ;
+                       skos:definition "an algorithm which uses training data to fine tune the parameters of a machine learning model"^^xsd:string ;
+                       skos:example "Training of a neural network updates its weights."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/TwoDimensionalLayer
+anno:TwoDimensionalLayer rdf:type owl:Class ;
+                         rdfs:subClassOf anno:Layer ;
+                         fibo-fnd-utl-av:definitionOrigin "http://keras.io/layers/convolutional/" ;
+                         rdfs:label "two dimensional layer"^^xsd:string ;
+                         skos:definition "a layer in a neural network which has two dimensional input, such as a digital image"^^xsd:string ;
+                         skos:example "Many convolutional layers are two dimensional layers."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/UniformDensityFunction
+anno:UniformDensityFunction rdf:type owl:Class ;
+                            rdfs:subClassOf anno:ProbabilityDensityFunction ;
+                            fibo-fnd-utl-av:definitionOrigin "http://mathworld.wolfram.com/UniformDistribution.html"^^xsd:string ;
+                            rdfs:label "uniform probability function"^^xsd:string ;
+                            skos:definition "a continuous symmetric probability density function characterized by equal values for each input in its range"^^xsd:string ;
+                            skos:example "The uniform density function has an equal chance of selecting any value in its range." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/UniformInitializationAlgorithm
+anno:UniformInitializationAlgorithm rdf:type owl:Class ;
+                                    rdfs:subClassOf anno:WeightInitializationAlgorithm ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty anno:isCompatibleWithActivationFunction ;
+                                                      owl:someValuesFrom anno:ActivationFunction
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty anno:isCompatibleWithLayerType ;
+                                                      owl:someValuesFrom anno:HiddenLayer
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty anno:hasMaximumCompatibleDepth ;
+                                                      owl:hasValue 2
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty anno:hasMinimumCompatibleDepth ;
+                                                      owl:hasValue 0
+                                                    ] ;
+                                    owl:disjointWith anno:XavierInitializationAlgorithm ,
+                                                     anno:ZeroInitializationAlgorithm ;
+                                    fibo-fnd-utl-av:definitionOrigin "http://keras.io/initializations/" ;
+                                    rdfs:label "uniform initialization algorithm" ;
+                                    skos:definition "a weight initialization algorithm that picks from a uniform distribution" ;
+                                    skos:example "The uniform initialization algorithm is appropriate for small, simple neural networks." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/Unit
+anno:Unit rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( anno:Function
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty anno:hasActivationFunction ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass anno:ActivationFunction
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ,
+                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty fibo-fnd-rel-rel:isMemberOf ;
+                                                       owl:someValuesFrom anno:Layer
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty fibo-fnd-rel-rel:isPartOf ;
+                                                       owl:someValuesFrom anno:ArtificialNeuralNetwork
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf anno:Function ;
+          fibo-fnd-utl-av:definitionOrigin "https://www.willamette.edu/~gorr/classes/cs449/intro.html"^^xsd:string ;
+          rdfs:label "unit"^^xsd:string ;
+          skos:definition "a function performed over the weighted sum of its inputs in an artificial neural network"^^xsd:string ;
+          skos:example "Layers are composed of one or more units." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/Weight
+anno:Weight rdf:type owl:Class ;
+            rdfs:subClassOf fibo-fnd-utl-alx:Variable ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty fibo-fnd-utl-bt:hasNumericValue ;
+                              owl:someValuesFrom fibo-fnd-utl-bt:number
+                            ] ;
+            fibo-fnd-utl-av:definitionOrigin "David Leverington"^^xsd:string ;
+            sm:dependsOn "artificial neural network"^^xsd:string ;
+            rdfs:label "weight"^^xsd:string ;
+            skos:definition "values associated with each vector and node in the network, which constrain how input data (e.g., satellite image values) are related to output data (e.g., land-cover classes)."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/WeightInitializationAlgorithm
+anno:WeightInitializationAlgorithm rdf:type owl:Class ;
+                                   rdfs:subClassOf anno:InitializationAlgorithm ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty anno:hasMaximumCompatibleDepth ;
+                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onDataRange xsd:nonNegativeInteger
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty anno:hasMinimumCompatibleDepth ;
+                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onDataRange xsd:nonNegativeInteger
+                                                   ] ;
+                                   fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology"^^xsd:string ;
+                                   sm:dependsOn "Initialization algorithm."^^xsd:string ,
+                                                "artificial neural network"^^xsd:string ,
+                                                "weight"^^xsd:string ;
+                                   rdfs:label "weight initialization algorithm"^^xsd:string ;
+                                   skos:definition "an algorithm used to initialize the weights of a neural network by randomly choosing from a probablility distribution"^^xsd:string ;
+                                   skos:example "The recommendation system chose a weight initialization algorithm to initialize the network."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/XavierInitializationAlgorithm
+anno:XavierInitializationAlgorithm rdf:type owl:Class ;
+                                   rdfs:subClassOf anno:WeightInitializationAlgorithm ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty anno:isCompatibleWithActivationFunction ;
+                                                     owl:someValuesFrom anno:LinearActivationFunction
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty anno:isCompatibleWithLayerType ;
+                                                     owl:someValuesFrom anno:HiddenLayer
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty anno:hasMaximumCompatibleDepth ;
+                                                     owl:hasValue 100
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty anno:hasMinimumCompatibleDepth ;
+                                                     owl:hasValue 0
+                                                   ] ;
+                                   owl:disjointWith anno:ZeroInitializationAlgorithm ;
+                                   fibo-fnd-utl-av:definitionOrigin anno:citation2 ;
+                                   rdfs:label "Xavier initialization algorithm" ;
+                                   skos:definition "a weight initialization function which picks from a probability distribution in a normalized range" ;
+                                   skos:example "The recommendation system picked a Xavier Initialization Algorithm to initialize the network because it was deep." .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/ZeroInitializationAlgorithm
+anno:ZeroInitializationAlgorithm rdf:type owl:Class ;
+                                 rdfs:subClassOf anno:WeightInitializationAlgorithm ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty anno:isCompatibleWithActivationFunction ;
+                                                   owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass anno:ActivationFunction
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty anno:isCompatibleWithLayerType ;
+                                                   owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass anno:Layer
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty anno:hasMaximumCompatibleDepth ;
+                                                   owl:hasValue 0
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty anno:hasMinimumCompatibleDepth ;
+                                                   owl:hasValue 0
+                                                 ] ;
+                                 fibo-fnd-utl-av:definitionOrigin "http://keras.io/initializations/" ;
+                                 rdfs:label "zero initialization algorithm" ;
+                                 skos:definition "a weight initialization algorithm which assigns a value of zero to each weight" ;
+                                 skos:example "The zero initialization algorithm should almost always be avoided." .
+
+
+###  http://www.nanopub.org/nschema#Assertion
+np:Assertion rdf:type owl:Class .
+
+
+###  http://www.nanopub.org/nschema#Nanopublication
+np:Nanopublication rdf:type owl:Class .
+
+
+###  http://www.nanopub.org/nschema#Provenance
+np:Provenance rdf:type owl:Class .
+
+
+###  http://www.nanopub.org/nschema#PublicationInfo
+np:PublicationInfo rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Person
+prov:Person rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/citation
+anno:citation rdf:type owl:NamedIndividual ,
+                       anno:OE_bibliographic_citation ;
+              dct:source "Boca Raton, FL: CRC Press, pp. 531 and 533"^^xsd:string ;
+              sm:author " Beyer, W. H. "^^xsd:string ;
+              sm:publicationDate "1987"^^xsd:string ;
+              rdfs:label "Standard Mathematical Tables , 28th ed."^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/citation1
+anno:citation1 rdf:type owl:NamedIndividual ,
+                        anno:OE_bibliographic_citation ;
+               dct:source "IEEE International Conference on Computer Vision (ICCV)"^^xsd:string ;
+               sm:author "K. He, X. Zhang, S. Ren, and J. Sun"^^xsd:string ;
+               sm:publicationDate "2015"^^xsd:string ;
+               rdfs:label "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/citation2
+anno:citation2 rdf:type owl:NamedIndividual ,
+                        anno:OE_bibliographic_citation ;
+               dct:source "International conference on artificial intelligence and statistics  pp. 249-256"^^xsd:string ;
+               sm:author "X. Glorot, Y Bengio"^^xsd:string ;
+               sm:publicationDate "2010"^^xsd:string ;
+               rdfs:label "Understanding the difficulty of training deep feedforward neural networks"^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/citation3
+anno:citation3 rdf:type owl:NamedIndividual ,
+                        anno:OE_bibliographic_citation ;
+               dct:source "Lecture Notes in Computer Science Neural Networks: Tricks of the Trade, pp. 9-50"^^xsd:string ;
+               sm:author "Y. Lecun, L. Bottou, G. B. Orr, and K.-R. Muller"^^xsd:string ;
+               sm:publicationDate "1998"^^xsd:string ;
+               rdfs:label "Efficient BackProp"^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/citation4
+anno:citation4 rdf:type owl:NamedIndividual ,
+                        anno:OE_bibliographic_citation ;
+               dct:source "Neurocomputing"^^xsd:string ;
+               sm:author "J. Y. F. Yam and T. W. S. Chow"^^xsd:string ;
+               sm:publicationDate "2000"^^xsd:string ;
+               rdfs:label "A weight initialization method for improving training speed in feedforward neural network"^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/citation5
+anno:citation5 rdf:type owl:NamedIndividual ,
+                        anno:OE_bibliographic_citation ;
+               dct:source " Berlin: Springer pp 437-478"^^xsd:string ;
+               sm:author "Montavon Gregoire, Orr Genevie`ve B., Muller Klaus-Robert, and Y. Bengio"^^xsd:string ;
+               sm:publicationDate "2012"^^xsd:string ;
+               rdfs:label " Neural networks tricks of the trade"^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/citation6
+anno:citation6 rdf:type owl:NamedIndividual ,
+                        anno:OE_bibliographic_citation ;
+               dct:source "arXiv preprint arXiv:1207.0580"^^xsd:string ;
+               sm:author "G. E. Hinton, N. Srivastava, A. Krizhevsky, I. Sutskever, and R. Salakhutdinov"^^xsd:string ;
+               sm:publicationDate "2012"^^xsd:string ;
+               rdfs:label "Improving neural networks by preventing co-adaptation of feature detectors,"^^xsd:string .
+
+
+###  http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_11_Team_Cerebral/citation7
+anno:citation7 rdf:type owl:NamedIndividual ,
+                        anno:OE_bibliographic_citation ;
+               dct:source "Neural Networks 16, no. 5"^^xsd:string ;
+               sm:author "Matsugu, Masakazu, Katsuhiko Mori, Yusuke Mitari, and Yuji Kaneda"^^xsd:string ;
+               sm:publicationDate "2003"^^xsd:string ;
+               rdfs:label "Subject independent facial expression recognition with robust face detection using a convolutional neural network."^^xsd:string .
+
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                            foaf:Person
+                 ] ,
+                 [ rdf:type dct:Agent ,
+                            foaf:Person
+                 ]
+] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ pav:authoredBy [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ] ,
+                  [ rdf:type dct:Agent ,
+                             foaf:Person
+                  ]
+ ] .
+
+[ foaf:homePage <http://research.microsoft.com/en-us/um/people/kahe/> ;
+   foaf:mbox <mailto:kahe@microsoft.com>
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+[ dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ,
+             "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+anno:hasMinimumCompatibleDepth skos:definition "Indicates the minimum artificial neural network depth with which a weight initialization algorithm can be used."^^xsd:string ;
+                                fibo-fnd-utl-av:definitionOrigin "Artificial Neural Network Ontology"^^xsd:string ;
+                                rdfs:label "has minimum compatible depth"^^xsd:string .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( anno:HyperbolicTangentActivationFunction
+                anno:LogisticSigmoidActivationFunction
+                anno:SoftmaxLogisticRegressionActivationFunction
+                anno:SoftsignActivationFunction
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
