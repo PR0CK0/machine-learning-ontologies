@@ -18,3 +18,5 @@ Both of these scores are ad-hoc and focused on answering questions about ML work
 | ML-Schema | 7 | 10 | we all know ml-schema, very general and technically useful as a high-level binding, but has zero re-use and isn't connected to anything higher
 | nno | 5 | 5 | a simpler mex / anno, pretty clean, no re-use of anything |
 | Onto-DM | 9 | 9 | probably the best bet if you have the will to understand it, re-uses BFO so it is interoperable but also imports all of OBI which means half of the taxonomy is littered with irrelevant biomedical terms, definitely packed with good knowledge
+
+Onto-DM is the best bet, but unfortunately it is old and dead. It is nearly impossible to located on the internet and documentation is atrocious. It is of the most interest because of its adherence to BFO.
