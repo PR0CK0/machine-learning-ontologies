@@ -3,7 +3,9 @@ A dump of ML and ML-related RDF/OWL ontologies because some of them are impossib
 
 ## Summaries
 Applicability score / 10: how useful it is for practical work
+
 Coverage score / 10: how complete it seems
+
 Both of these scores are ad-hoc and focused on answering questions about ML work; if the ontology seems like it could not answer such questions, its applicability will suffer
 
 | Name | Applicability / 10 | Coverage / 10 | Comments |
